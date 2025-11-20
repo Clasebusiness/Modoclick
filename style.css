@@ -70,6 +70,20 @@ body {
   cursor: pointer;
 }
 
+.btn {
+    background: var(--color-secundario);
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+
+    display: block;        /* Permite centrarlo */
+    margin: 0 auto;        /* CENTRA HORIZONTALMENTE */
+    width: auto;           /* Evita que se estire */
+}
+
 .section {
   padding: 80px 10%;
   text-align: center;

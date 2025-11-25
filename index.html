@@ -1,126 +1,346 @@
 <!DOCTYPE html>
-<html lang="en">
-
-  <head>
-    <meta charset="UTF-8">
-    <title>Modo click</title>
-    <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Modo Click | Marketing & Growth</title>
-
-<meta name="description" content="Diseño de campañas, pauta digital, redes sociales, branding y automatizaciones para empresas que quieren crecer.">
-
-<link rel="icon" type="image/png" href="img/favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap">
-<link rel="stylesheet" href="./style.css">
-
-  </head>
-    
-  <body>
-  <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modo Click | Agencia Digital</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ModoClick | Agencia de Marketing Digital</title>
-  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
-</head>
+    <!-- Fuentes -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600;700&family=Comfortaa:wght@600&display=swap"
+    />
 
-<body>
-  <nav class="navbar">
-    <div class="logo"><strong>Modo Click</strong></div>
-    <div class="menu">
-      <a href="#servicios">Servicios</a>
-      <a href="#planes">Planes</a>
-      <a href="#contacto">Contacto</a>
-    </div>
-  </nav>
+    <!-- Estilos -->
+    <link rel="stylesheet" href="estilo.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="logo">
+        <!-- Si luego subes el PNG del logo, reemplaza el span por una <img> -->
+        <span class="logo-text">Modo<span>Click.</span></span>
+      </div>
 
-  <header class="header">
-    <h1>Lleva tu marca al siguiente nivel</h1>
-    <p>Campañas, posicionamiento y diseño para empresas que quieren destacar</p>
-    <a 
-  href="https://wa.me/56954747361?text=Hola%20quiero%20asesor%C3%ADa%20para%20mejorar%20mi%20marca.%20%C2%BFMe%20puedes%20ayudar%3F" 
-  class="btn" 
-  target="_blank">
-  Quiero asesoría
-</a>
+      <div class="menu">
+        <a href="#servicios">Servicios</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#planes">Planes</a>
+        <a href="#contacto">Contacto</a>
+      </div>
 
-  </header>
+      <div class="navbar-cta">
+        <a
+          class="btn btn-outline"
+          href="https://wa.me/56954747361?text=Hola%2C%20vengo%20desde%20tu%20sitio%20web%20y%20quiero%20una%20asesor%C3%ADa%20para%20hacer%20crecer%20mi%20negocio.%20%F0%9F%92%AA"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Hablemos por WhatsApp
+        </a>
+      </div>
+    </nav>
 
-  <section class="section" id="servicios">
-    <h2>¿Qué hacemos en Modo Click?</h2>
-    <p>Diseño de campañas, gestión de redes sociales, pauta digital, branding, automatizaciones y más.</p>
-    
-    
-</a>
-<section class="section" id="servicios">
-    <h2>Servicios</h2>
+    <!-- HERO -->
+    <header class="hero">
+      <div class="hero-inner">
+        <div class="hero-pill">Agencia Digital Certificada</div>
 
-    <p>En Modo Click te ayudamos a crecer con soluciones adaptadas a tu negocio:</p>
+        <h1 class="hero-title">
+          Lleva tu marca al
+          <span>siguiente nivel.</span>
+        </h1>
 
-    <ul class="servicios-lista">
-        <li><strong>🎥 Servicios Audiovisuales</strong>  
-            – Creación de contenido profesional, videos corporativos, reels, comerciales y piezas publicitarias.
-        </li>
+        <p class="hero-subtitle">
+          Agencia de Marketing Digital, Growth y Automatización.
+          Estrategias reales para <strong>resultados reales.</strong>
+        </p>
 
-        <li><strong>📣 Campañas Publicitarias</strong>  
-            – Facebook Ads, Instagram Ads, Google Ads, optimización y segmentación estratégica.
-        </li>
+        <div class="hero-buttons">
+          <a
+            class="btn btn-primary"
+            href="https://wa.me/56954747361?text=Hola%2C%20quiero%20una%20asesor%C3%ADa%20de%20marketing%20para%20mi%20negocio.%20%F0%9F%9A%80"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Quiero una Asesoría
+          </a>
 
-        <li><strong>📈 Posicionamiento SEO y SEM</strong>  
-            – Auditoría web, optimización de motores de búsqueda y campañas Google orientadas a resultados.
-        </li>
+          <button class="btn btn-secondary" onclick="scrollToSection('servicios')">
+            Ver Servicios
+          </button>
+        </div>
 
-        <li><strong>📱 Administración de Redes Sociales</strong>  
-            – Gestión de contenido, diseño, calendarios, engagement y crecimiento orgánico.
-        </li>
+        <div class="hero-scroll" onclick="scrollToSection('servicios')">
+          ↓
+        </div>
+      </div>
+    </header>
 
-        <li><strong>🧠 Asesorías de Marketing</strong>  
-            – Estrategias para marcas, revisión de procesos, construcción de branding y optimización digital.
-        </li>
+    <main>
+      <!-- SERVICIOS -->
+      <section id="servicios" class="section section-servicios">
+        <div class="section-header">
+          <h2>Nuestros Servicios</h2>
+          <p>
+            Soluciones integrales diseñadas para escalar tu negocio en el
+            ecosistema digital moderno.
+          </p>
+        </div>
 
-        <li><strong>🛠️ Automatizaciones</strong>  
-            – Chatbots, embudos, flujos de venta automáticos y procesos con IA.
-        </li>
-    </ul>
-</section>
+        <div class="cards-grid">
+          <article class="card card-service">
+            <div class="card-icon">🎥</div>
+            <h3>Producción Audiovisual</h3>
+            <p>
+              Videos corporativos, contenido para redes y fotografía profesional
+              para mostrar la esencia de tu marca con alto impacto.
+            </p>
+          </article>
 
-  </section>
+          <article class="card card-service">
+            <div class="card-icon">📣</div>
+            <h3>Publicidad Digital</h3>
+            <p>
+              Campañas en Meta Ads y Google Ads enfocadas en maximizar el
+              retorno de inversión con segmentación inteligente.
+            </p>
+          </article>
 
-  <section class="section" id="planes">
-    <h2>Nuestros Planes</h2>
-    <div class="plan-card">
-      <h3>Plan Básico</h3>
-      <p class="price">$89.990 CLP</p>
-      <p>Ideal para comenzar en redes y captar los primeros clientes</p>
-    </div>
-  </section>
+          <article class="card card-service">
+            <div class="card-icon">🔍</div>
+            <h3>SEO &amp; SEM</h3>
+            <p>
+              Auditorías técnicas y estrategias de posicionamiento para que tus
+              clientes te encuentren primero en buscadores.
+            </p>
+          </article>
 
-  <section class="section" id="contacto">
-    <h2>Hablemos</h2>
-    <form class="contact-form" onsubmit="enviarFormulario(event)">
-      <input type="text" name="nombre" placeholder="Tu nombre" required>
-      <input type="email" name="email" placeholder="Correo electrónico" required>
-      <textarea name="mensaje" placeholder="Cuéntanos sobre tu negocio" rows="5"></textarea>
-      <button type="submit" class="btn">Enviar mensaje</button>
-    </form>
-  </section>
+          <article class="card card-service">
+            <div class="card-icon">💬</div>
+            <h3>Gestión de Redes Sociales</h3>
+            <p>
+              Community Management completo, calendario de contenidos, diseño y
+              gestión de comunidad para fidelizar a tus clientes.
+            </p>
+          </article>
 
-  <footer class="footer">
-    <p>&copy; 2025 ModoClick. Todos los derechos reservados.</p>
-  </footer>
+          <article class="card card-service">
+            <div class="card-icon">🎯</div>
+            <h3>Consultoría de Marca</h3>
+            <p>
+              Estrategia de branding, definición de tono, Look &amp; Feel y
+              diferenciación clara frente a tu competencia.
+            </p>
+          </article>
 
-  <script src="script.js"></script>
-</body>
+          <article class="card card-service">
+            <div class="card-icon">⚙️</div>
+            <h3>Automatización</h3>
+            <p>
+              Implementación de chatbots, embudos de venta y CRM para escalar tu
+              operación sin perder el control de tus clientes.
+            </p>
+          </article>
+        </div>
+      </section>
 
-</html>
-    <script  src="./script.js"></script>
+      <!-- NOSOTROS -->
+      <section id="nosotros" class="section section-nosotros">
+        <div class="about-grid">
+          <div class="about-text">
+            <span class="badge">Sobre Nosotros</span>
+            <h2>
+              Más que una agencia, <br />
+              <span>tu socio de crecimiento.</span>
+            </h2>
+            <p>
+              En Modo Click no solo ejecutamos campañas; diseñamos ecosistemas
+              digitales completos para marcas que quieren crecer con
+              estrategia, creatividad y datos.
+            </p>
 
+            <ul class="about-list">
+              <li>Estrategias basadas en datos reales, no en suposiciones.</li>
+              <li>
+                Comunicación transparente y reportes periódicos para que siempre
+                sepas qué está pasando.
+              </li>
+              <li>
+                Equipo multidisciplinario con experiencia en marcas chilenas.
+              </li>
+            </ul>
+          </div>
+
+          <div class="about-stats">
+            <div class="mission-card">
+              <h3>Nuestra Misión</h3>
+              <p>
+                Democratizar el acceso a estrategias de crecimiento de alto
+                nivel para empresas chilenas.
+              </p>
+            </div>
+
+            <div class="stats-grid">
+              <div class="stat-card">
+                <div class="stat-number">+4</div>
+                <div class="stat-label">Años de experiencia</div>
+              </div>
+
+              <div class="stat-card">
+                <div class="stat-number">+50</div>
+                <div class="stat-label">Marcas potenciadas</div>
+              </div>
+
+              <div class="stat-card">
+                <div class="stat-number">+10k</div>
+                <div class="stat-label">Leads generados</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIOS -->
+      <section class="section section-testimonios">
+        <div class="section-header">
+          <h2>Lo que dicen nuestros clientes</h2>
+          <p>
+            La confianza de quienes han trabajado con nosotros es nuestra mejor
+            carta de presentación.
+          </p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card card-testimonial">
+            <div class="rating">★★★★★</div>
+            <p class="quote">
+              “Modo Click transformó completamente nuestra presencia digital. Los
+              funnels y la automatización nos permitieron escalar sin perder el
+              control de los leads.”
+            </p>
+            <div class="client">
+              <div class="client-name">Carlos Mendoza</div>
+              <div class="client-role">CEO · TechFlow Chile</div>
+            </div>
+          </article>
+
+          <article class="card card-testimonial">
+            <div class="rating">★★★★★</div>
+            <p class="quote">
+              “El equipo entendió perfecto nuestra estética. Los Reels que
+              producen tienen un alcance increíble y han duplicado nuestras
+              ventas por Instagram.”
+            </p>
+            <div class="client">
+              <div class="client-name">Andrea Ruiz</div>
+              <div class="client-role">Fundadora · Boutique La Palma</div>
+            </div>
+          </article>
+
+          <article class="card card-testimonial">
+            <div class="rating">★★★★★</div>
+            <p class="quote">
+              “Profesionalismo puro. La implementación del CRM y las campañas
+              pagadas nos permitieron ordenar la operación y captar clientes
+              mejor calificados.”
+            </p>
+            <div class="client">
+              <div class="client-name">Felipe Osorio</div>
+              <div class="client-role">
+                Gerente Comercial · Constructora Andina
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- PLANES -->
+      <section id="planes" class="section section-planes">
+        <div class="section-header">
+          <h2>Planes diseñados para crecer</h2>
+          <p>
+            Comienza con una base sólida y escala a medida que los resultados
+            llegan.
+          </p>
+        </div>
+
+        <div class="pricing-wrapper">
+          <article class="pricing-card">
+            <div class="pricing-badge">Más popular</div>
+            <h3>Plan Básico</h3>
+            <div class="pricing-price">
+              <span class="pricing-amount">$89.990</span>
+              <span class="pricing-currency">CLP /mes</span>
+            </div>
+
+            <ul class="pricing-list">
+              <li>Gestión de Redes Sociales</li>
+              <li>12 posts mensuales (diseño + copy)</li>
+              <li>Informe mensual de métricas</li>
+              <li>Respuesta a comentarios básicos</li>
+              <li>Optimización de perfil</li>
+            </ul>
+
+            <a
+              class="btn btn-primary btn-full"
+              href="https://wa.me/56954747361?text=Hola%2C%20quiero%20contratar%20el%20Plan%20B%C3%A1sico%20de%20Modo%20Click.%20%F0%9F%92%BB"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Contratar Plan
+            </a>
+
+            <p class="pricing-note">
+              Sin contratos forzosos. Cancelas cuando quieras.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- CONTACTO -->
+      <section id="contacto" class="section section-contacto">
+        <div class="section-header">
+          <h2>Hablemos de tu proyecto</h2>
+          <p>Cuéntanos brevemente qué necesitas y te contactamos.</p>
+        </div>
+
+        <form class="contact-form" onsubmit="enviarFormulario(event)">
+          <input
+            type="text"
+            name="nombre"
+            placeholder="Tu nombre"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Correo electrónico"
+            required
+          />
+          <textarea
+            name="mensaje"
+            rows="4"
+            placeholder="Cuéntanos sobre tu negocio y qué te gustaría mejorar"
+            required
+          ></textarea>
+
+          <button type="submit" class="btn btn-primary btn-full">
+            Enviar mensaje
+          </button>
+
+          <p class="contact-note">
+            También puedes escribirnos directo a
+            <strong> admin@modoclick.cl</strong>.
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2025 ModoClick. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
-  
-</html> 
+</html>

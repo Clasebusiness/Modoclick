@@ -1,8 +1,8 @@
 :root {
-  --color-primario: #3268e5;
-  --color-secundario: #54d171;
-  --color-fondo: #f6f8fc;
-  --color-texto: #1a1a1a;
+  --color-primario: #ff0000;   /* ROJO */
+  --color-secundario: #ff0000; /* BOTONES ROJOS */
+  --color-fondo: #ffffff;      /* BLANCO */
+  --color-texto: #000000;      /* NEGRO */
   --color-blanco: #ffffff;
   --color-gris: #dddddd;
   --font-principal: "Lato", sans-serif;
@@ -21,6 +21,7 @@ body {
   color: var(--color-texto);
 }
 
+/* NAVBAR */
 .navbar {
   background: var(--color-blanco);
   display: flex;
@@ -37,9 +38,9 @@ body {
   margin-left: 20px;
 }
 
+/* HEADER */
 .header {
-  background: url("https://via.placeholder.com/1600x600") no-repeat center
-    center/cover;
+  background: url("https://via.placeholder.com/1600x600") no-repeat center center/cover;
   height: 600px;
   color: white;
   display: flex;
@@ -59,31 +60,23 @@ body {
   margin: 20px 0;
 }
 
+/* BOTÓN */
 .btn {
   background: var(--color-secundario);
   border: none;
-  padding: 12px 28px;
+  padding: 12px 20px;
   font-size: 16px;
   font-weight: bold;
   color: white;
   border-radius: 8px;
   cursor: pointer;
+
+  display: block;
+  margin: 0 auto; 
+  width: auto;
 }
 
-.btn {
-    background: var(--color-secundario);
-    border: none;
-    padding: 12px 20px;
-    font-size: 16px;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-
-    display: block;        /* Permite centrarlo */
-    margin: 0 auto;        /* CENTRA HORIZONTALMENTE */
-    width: auto;           /* Evita que se estire */
-}
-
+/* SECCIONES */
 .section {
   padding: 80px 10%;
   text-align: center;
@@ -95,6 +88,38 @@ body {
   margin-bottom: 30px;
 }
 
+/* SERVICIOS */
+.servicios-lista {
+  list-style: none;
+  padding: 0;
+  max-width: 800px;
+  margin: 20px auto;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.servicios-lista li {
+  margin-bottom: 18px;
+  padding: 12px 15px;
+  background: #ffffffcc;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* LOGO */
+.logo img,
+.logo-img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+/* PLANES */
 .plan-card {
   background: white;
   padding: 30px;
@@ -111,10 +136,11 @@ body {
 
 .plan-card .price {
   font-size: 32px;
-  color: var(--color-secundario);
+  color: var(--color-primario);
   margin-bottom: 20px;
 }
 
+/* CONTACTO */
 .contact-form {
   max-width: 500px;
   margin: 0 auto;
@@ -131,38 +157,10 @@ body {
   border-radius: 6px;
 }
 
+/* FOOTER */
 .footer {
   background: var(--color-primario);
   color: white;
   text-align: center;
   padding: 30px 10%;
-}
-.servicios-lista {
-    list-style: none;
-    padding: 0;
-    max-width: 800px;
-    margin: 20px auto;
-    font-size: 18px;
-    line-height: 1.7;
-}
-
-.servicios-lista li {
-    margin-bottom: 18px;
-    padding: 12px 15px;
-    background: #ffffffcc;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-}
-
-/* === LOGO NAVBAR === */
-.logo img,
-.logo-img {
-    height: 48px;
-    width: auto;
-    object-fit: contain;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
 }

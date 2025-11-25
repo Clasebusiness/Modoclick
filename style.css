@@ -50,8 +50,12 @@ body {
 }
 
 .header h1 {
-  font-family: var(--font-destacada);
-  font-size: 48px;
+    font-family: var(--font-principal);
+    font-size: 48px;
+    color: #000000; /* negro */
+    text-shadow: none; /* opcional: quita el resplandor blanco */
+}
+
 }
 
 .header p {

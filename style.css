@@ -159,7 +159,8 @@ body {
     padding: 12px 15px;
     background: #ffffffcc;
     border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 15px rgba(26, 26, 26, 0.18);
+
 }
 
 /* === LOGO NAVBAR === */

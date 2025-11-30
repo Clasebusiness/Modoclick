@@ -56,12 +56,12 @@ body {
     text-shadow: none; /* opcional: quita el resplandor blanco */
 }
 
+{
+    font-size: 24px;
+    margin: 20px 0;
+    color: #29CDFF;
 }
 
-.header p {
-  font-size: 24px;
-  margin: 20px 0;
-}
 
 .btn {
   background: var(--color-secundario);

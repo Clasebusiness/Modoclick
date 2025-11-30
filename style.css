@@ -155,11 +155,14 @@ body {
 }
 
 .servicios-lista li {
-    margin-bottom: 18px;
-    padding: 12px 15px;
-    background: #ffffffcc;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(26, 26, 26, 0.18);
+  margin-bottom: 18px;
+  padding: 15px 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(26, 26, 26, 0.18); /* nuevo color */
+  transition: all 0.3s ease;
+}
+
 
 }
 

@@ -210,3 +210,14 @@ footer a:active {
   color: #ffffff !important; /* blanco siempre */
   text-decoration: none;
 }
+.ver-video {
+  color: #cc0000; /* rojo corporativo */
+  font-weight: 600;
+  margin-left: 10px;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.ver-video:hover {
+  opacity: 0.7;
+}

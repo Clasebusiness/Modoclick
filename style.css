@@ -200,5 +200,14 @@ body {
   font-size: 18px;
   padding: 14px 26px;
   border-radius: 8px;
+	
+}
+
+footer a,
+footer a:visited,
+footer a:hover,
+footer a:active {
+  color: #ffffff !important; /* blanco siempre */
+  text-decoration: none;
 }
 	

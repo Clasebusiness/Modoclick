@@ -186,3 +186,15 @@ body {
     transform: translateY(0);
   }
 }
+/* === ANIMACIÓN TÍTULO HERO === */
+.hero-title {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* Cuando entra en pantalla */
+.hero-title.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

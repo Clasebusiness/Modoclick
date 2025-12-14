@@ -1,29 +1,27 @@
-// ----- FORMULARIO -----
-function enviarFormulario(event) {
-  event.preventDefault();
-  alert("Gracias por contactarte. Te responderemos en breve 🚀");
-  event.target.reset();
-}
-
-// ----- ANIMACIÓN TÍTULO HERO AL HACER SCROLL -----
+// HERO TITLE ANIMATION
 const heroTitle = document.querySelector(".hero-title");
 
-if (heroTitle) {
-  const observer = new IntersectionObserver(
-    ([entry]) => {
-      if (entry.isIntersecting) {
-        heroTitle.classList.add("visible");
-        observer.unobserve(heroTitle);
-      }
-    },
-    { threshold: 0.2 }
-  );
-
-  observer.observe(heroTitle);
-
-  // 👇 SOLUCIÓN CLAVE: activar si ya está visible al cargar
-  if (heroTitle.getBoundingClientRect().top < window.innerHeight) {
-    heroTitle.classList.add("visible");
+window.addEventListener("load", () => {
+  if (heroTitle) {
+    heroTitle.style.opacity = "1";
+    heroTitle.style.transform = "translateY(0)";
   }
-}
+});
 
+// SCROLL ANIMATION (Apple style)
+const animatedItems = document.querySelectorAll(
+  ".servicio-card, .plan-card, .contact-form"
+);
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  },
+  { threshold: 0.15 }
+);
+
+animatedItems.forEach((item) => observer.observe(item));

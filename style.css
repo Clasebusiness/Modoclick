@@ -48,7 +48,7 @@ body {
 }
 
 /* =========================
-   HEADER / HERO
+   HERO / HEADER
 ========================= */
 .header {
   height: 500px;
@@ -57,6 +57,12 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    rgba(41, 205, 255, 0.08) 100%
+  );
 }
 
 .header h1 {
@@ -102,9 +108,20 @@ body {
   margin-bottom: 20px;
 }
 
-/* Fondo suave para separar visualmente */
+/* Sección gris clara (Servicios) */
 .section--light {
   background: #f7f8fa;
+  border-top: 1px solid rgba(0,0,0,0.04);
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+}
+
+/* Sección contacto */
+.section-contact {
+  background: linear-gradient(
+    180deg,
+    rgba(41, 205, 255, 0.10) 0%,
+    #ffffff 100%
+  );
 }
 
 /* =========================
@@ -116,7 +133,6 @@ body {
   margin: 30px auto 0;
 }
 
-/* Card servicio */
 .servicio-card {
   position: relative;
   background: #ffffff;
@@ -127,7 +143,6 @@ body {
 
   border: 1px solid rgba(0, 0, 0, 0.04);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
-
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -154,7 +169,6 @@ body {
   opacity: 1;
 }
 
-/* Link ver video */
 .ver-video {
   margin-left: 10px;
   color: var(--color-secundario);
@@ -170,7 +184,13 @@ body {
   margin: auto;
   padding: 30px;
   border-radius: 14px;
-  background: #fff;
+
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    rgba(41, 205, 255, 0.10) 100%
+  );
+
   border: 1px solid rgba(0, 0, 0, 0.04);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -203,6 +223,7 @@ body {
   padding: 12px;
   border-radius: 6px;
   border: 1px solid var(--color-gris);
+  font-family: var(--font-principal);
 }
 
 /* =========================

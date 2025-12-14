@@ -198,3 +198,28 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+/* --- Separación de secciones con fondo suave --- */
+.section--light {
+  background: #f7f8fa; /* Gris suave */
+  padding: 80px 20px;
+}
+
+/* --- Cards flotantes y con sombra --- */
+.servicio-card {
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06); /* sombra suave */
+  border: 1px solid rgba(0, 0, 0, 0.04); /* borde suave */
+}
+
+/* --- Sutil línea de color rojo en las cards --- */
+.servicio-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #cc0000; /* Rojo corporativo */
+  border-radius: 14px 14px 0 0;
+}

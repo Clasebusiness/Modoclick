@@ -171,3 +171,18 @@ body {
 .btn:hover {
   background: #1fb8e6; /* leve variación del celeste */
 }
+/* Animación de entrada hero */
+.header .btn {
+  animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

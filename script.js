@@ -1,27 +1,43 @@
-// HERO TITLE ANIMATION
-const heroTitle = document.querySelector(".hero-title");
+// ===============================
+// ANIMACIONES ESTILO APPLE
+// ===============================
 
-window.addEventListener("load", () => {
-  if (heroTitle) {
-    heroTitle.style.opacity = "1";
-    heroTitle.style.transform = "translateY(0)";
-  }
-});
-
-// SCROLL ANIMATION (Apple style)
+// Elementos animables
 const animatedItems = document.querySelectorAll(
-  ".servicio-card, .plan-card, .contact-form"
+  ".hero-title, .servicio-card, .plan-card, .contact-form"
 );
 
+// Intersection Observer
 const observer = new IntersectionObserver(
-  (entries) => {
+  (entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("visible");
+        observer.unobserve(entry.target); // Apple-style: anima una vez
       }
     });
   },
-  { threshold: 0.15 }
+  {
+    threshold: 0.15,
+  }
 );
 
-animatedItems.forEach((item) => observer.observe(item));
+// Observar elementos
+animatedItems.forEach((item) => {
+  observer.observe(item);
+
+  // Si ya está visible al cargar (hero)
+  if (item.getBoundingClientRect().top < window.innerHeight) {
+    item.classList.add("visible");
+    observer.unobserve(item);
+  }
+});
+
+// ===============================
+// FORMULARIO
+// ===============================
+function enviarFormulario(event) {
+  event.preventDefault();
+  alert("Gracias por contactarte. Te responderemos en breve 🚀");
+  event.target.reset();
+}

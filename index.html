@@ -3,91 +3,128 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Modo Click</title>
+  <title>ModoClick | Agencia de Marketing Digital</title>
 
-  <!-- Fuentes -->
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Comfortaa:wght@500;600&display=swap" rel="stylesheet">
+  <meta name="description" content="Diseño de campañas, pauta digital, redes sociales, branding y automatizaciones para empresas que quieren crecer.">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <!-- NAVBAR -->
   <nav class="navbar">
-    <div class="logo">Modo Click</div>
-    <div class="nav-links">
+    <div class="logo">
+  <a href="/" class="logo-link"><strong>Modo Click</strong></a>
+</div>
+
+    <div class="menu">
       <a href="#servicios">Servicios</a>
       <a href="#planes">Planes</a>
       <a href="#contacto">Contacto</a>
     </div>
   </nav>
 
-  <!-- HERO -->
-  <header class="header section--gradient">
+  <!-- HEADER -->
+  <header class="header">
     <h1 class="hero-title">Lleva tu marca al siguiente nivel</h1>
+
     <p>Campañas, posicionamiento y diseño para empresas que quieren destacar</p>
-    <a href="#contacto" class="btn">Quiero asesoría</a>
+
+    <a 
+      href="https://wa.me/56954747361?text=Hola%20quiero%20asesor%C3%ADa%20para%20mejorar%20mi%20marca"
+      class="btn"
+      target="_blank">
+      Quiero asesoría
+    </a>
   </header>
 
+ 
+    
   <!-- SERVICIOS -->
-  <section id="servicios" class="section section--soft">
-    <h2>Servicios</h2>
-    <p>En Modo Click te ayudamos a crecer con soluciones adaptadas a tu negocio.</p>
+<section class="section" id="servicios">
 
-    <ul class="servicios-lista">
-      <li class="servicio-card">
-        <strong>Servicios Audiovisuales</strong> – Videos corporativos, reels y publicidad.
-        <a class="ver-video" href="#">Ver video</a>
-      </li>
-      <li class="servicio-card">
-        <strong>Campañas Publicitarias</strong> – Meta Ads, Google Ads y estrategia.
-      </li>
-      <li class="servicio-card">
-        <strong>SEO y SEM</strong> – Optimización web y posicionamiento.
-      </li>
-      <li class="servicio-card">
-        <strong>Redes Sociales</strong> – Gestión, diseño y crecimiento orgánico.
-      </li>
-      <li class="servicio-card">
-        <strong>Asesorías de Marketing</strong> – Branding y optimización digital.
-      </li>
-      <li class="servicio-card">
-        <strong>Automatizaciones</strong> – Embudos, chatbots y procesos con IA.
-      </li>
-    </ul>
-  </section>
+  <div class="titulo-seccion">
+    <h2>Servicios</h2>
+    <span class="linea-seccion"></span>
+  </div>
+
+  <p>En Modo Click te ayudamos a crecer con soluciones adaptadas a tu negocio:</p>
+
+  <ul class="servicios-lista">
+
+    <li class="servicio-card">
+      <strong>Servicios Audiovisuales</strong> – Creación de contenido profesional, videos corporativos, reels, comerciales y piezas publicitarias.
+      <a href="https://youtube.com/shorts/TwEY1EoeJos" target="_blank" class="ver-video">
+        Ver video
+      </a>
+    </li>
+
+    <li class="servicio-card">
+      <strong>Campañas Publicitarias</strong> – Facebook Ads, Instagram Ads, Google Ads, optimización y segmentación estratégica.
+    </li>
+
+    <li class="servicio-card">
+      <strong>Posicionamiento SEO y SEM</strong> – Auditoría web, optimización de motores de búsqueda y campañas Google orientadas a resultados.
+    </li>
+
+    <li class="servicio-card">
+      <strong>Administración de Redes Sociales</strong> – Gestión de contenido, diseño, calendarios, engagement y crecimiento orgánico.
+    </li>
+
+    <li class="servicio-card">
+      <strong>Asesorías de Marketing</strong> – Estrategias para marcas, revisión de procesos, construcción de branding y optimización digital.
+    </li>
+
+    <li class="servicio-card">
+      <strong>Automatizaciones</strong> – Chatbots, embudos, flujos de venta automáticos y procesos con IA.
+    </li>
+
+  </ul>
+
+</section>
+
+
 
   <!-- PLANES -->
-  <section id="planes" class="section section--white">
+  <section class="section" id="planes">
     <h2>Nuestros Planes</h2>
 
     <div class="plan-card">
       <h3>Plan Básico</h3>
-      <div class="price">$89.990 CLP</div>
-      <p>Plan mensual ideal para captar clientes.</p>
-      <a href="#" class="btn">Comprar Plan</a>
+      <p class="price">$89.990 CLP</p>
+      <p>Plan mensual ideal para captar los primeros clientes</p>
+
+      <a href="https://mpago.la/2TevaKy" target="_blank" class="btn">
+        Comprar Plan
+      </a>
     </div>
   </section>
 
   <!-- CONTACTO -->
-  <section id="contacto" class="section section-contact">
+  <section class="section" id="contacto">
     <h2>Hablemos</h2>
-
-    <form class="contact-form">
+    <form class="contact-form" onsubmit="enviarFormulario(event)">
       <input type="text" placeholder="Tu nombre" required>
       <input type="email" placeholder="Correo electrónico" required>
-      <textarea placeholder="Cuéntanos sobre tu negocio"></textarea>
-      <button class="btn" type="submit">Enviar mensaje</button>
+      <textarea rows="5" placeholder="Cuéntanos sobre tu negocio"></textarea>
+      <button type="submit" class="btn">Enviar mensaje</button>
     </form>
   </section>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <p>© 2025 ModoClick. Todos los derechos reservados.</p>
+    <p>&copy; 2025 ModoClick. Todos los derechos reservados.</p>
+    <p>Lun a Vie – 10:00 a 19:00 | Sáb – 11:00 a 16:00</p>
+
+    <div class="footer-links">
+      <a href="https://www.instagram.com/modoclick.cl" target="_blank">@modoclick.cl</a>
+      <a href="mailto:contacto@modoclick.cl">contacto@modoclick.cl</a>
+    </div>
   </footer>
 
-  <!-- JS -->
-  <script src="js/main.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

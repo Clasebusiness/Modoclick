@@ -13,11 +13,17 @@ if (heroTitle) {
     ([entry]) => {
       if (entry.isIntersecting) {
         heroTitle.classList.add("visible");
-        observer.unobserve(heroTitle); // solo una vez
+        observer.unobserve(heroTitle);
       }
     },
-    { threshold: 0.6 }
+    { threshold: 0.2 }
   );
 
   observer.observe(heroTitle);
+
+  // 👇 SOLUCIÓN CLAVE: activar si ya está visible al cargar
+  if (heroTitle.getBoundingClientRect().top < window.innerHeight) {
+    heroTitle.classList.add("visible");
+  }
 }
+

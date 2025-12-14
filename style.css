@@ -1,13 +1,20 @@
+/* =========================
+   VARIABLES GLOBALES
+========================= */
 :root {
   --color-primario: #000000;
   --color-secundario: #29cdff;
   --color-fondo: #ffffff;
   --color-texto: #1a1a1a;
   --color-gris: #dddddd;
+
   --font-principal: "Lato", sans-serif;
   --font-destacada: "Comfortaa", cursive;
 }
 
+/* =========================
+   RESET
+========================= */
 * {
   margin: 0;
   padding: 0;
@@ -20,13 +27,16 @@ body {
   color: var(--color-texto);
 }
 
-/* NAVBAR */
+/* =========================
+   NAVBAR
+========================= */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
   background: #fff;
+  border-top: 3px solid var(--color-secundario);
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
@@ -37,7 +47,9 @@ body {
   font-weight: 600;
 }
 
-/* HEADER */
+/* =========================
+   HEADER / HERO
+========================= */
 .header {
   height: 500px;
   display: flex;
@@ -56,7 +68,9 @@ body {
   margin: 15px 0;
 }
 
-/* BUTTON */
+/* =========================
+   BOTÓN
+========================= */
 .btn {
   background: var(--color-secundario);
   border: none;
@@ -66,9 +80,18 @@ body {
   border-radius: 8px;
   cursor: pointer;
   text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
 }
 
-/* SECTIONS */
+.btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 10px 25px rgba(26, 26, 26, 0.22);
+  background: #1fb8e6;
+}
+
+/* =========================
+   SECCIONES
+========================= */
 .section {
   padding: 80px 10%;
   text-align: center;
@@ -79,42 +102,83 @@ body {
   margin-bottom: 20px;
 }
 
-/* SERVICIOS */
+/* Fondo suave para separar visualmente */
+.section--light {
+  background: #f7f8fa;
+}
+
+/* =========================
+   SERVICIOS
+========================= */
 .servicios-lista {
   list-style: none;
   max-width: 900px;
   margin: 30px auto 0;
 }
 
+/* Card servicio */
 .servicio-card {
-  background: white;
+  position: relative;
+  background: #ffffff;
   padding: 20px 24px;
-  border-radius: 12px;
-  box-shadow: 0px 4px 15px rgba(26,26,26,0.18);
+  border-radius: 14px;
   margin-bottom: 18px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
   cursor: pointer;
+
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .servicio-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0px 8px 22px rgba(26,26,26,0.25);
+  box-shadow: 0px 12px 28px rgba(26, 26, 26, 0.22);
 }
 
+/* Línea superior azul */
+.servicio-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--color-secundario);
+  border-radius: 14px 14px 0 0;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.servicio-card:hover::before {
+  opacity: 1;
+}
+
+/* Link ver video */
 .ver-video {
   margin-left: 10px;
-  color: #cc0000;
+  color: var(--color-secundario);
   font-weight: 600;
   text-decoration: none;
 }
 
-/* PLAN */
+/* =========================
+   PLANES
+========================= */
 .plan-card {
   max-width: 300px;
   margin: auto;
   padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 15px rgba(0,0,0,0.08);
+  border-radius: 14px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.plan-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 12px 28px rgba(26, 26, 26, 0.22);
 }
 
 .price {
@@ -123,7 +187,9 @@ body {
   margin: 15px 0;
 }
 
-/* FORM */
+/* =========================
+   FORMULARIO
+========================= */
 .contact-form {
   max-width: 500px;
   margin: auto;
@@ -139,7 +205,9 @@ body {
   border: 1px solid var(--color-gris);
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 .footer {
   background: #000;
   color: white;
@@ -152,74 +220,17 @@ body {
   margin: 0 10px;
   text-decoration: none;
 }
-/* === ANIMACIÓN GLOBAL === */
-.btn,
-.servicio-card,
-.plan-card {
-  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
-}
 
-/* Hover uniforme */
-.btn:hover,
-.servicio-card:hover,
-.plan-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0px 10px 25px rgba(26, 26, 26, 0.22);
-}
-
-/* Botones un poco más vivos */
-.btn:hover {
-  background: #1fb8e6; /* leve variación del celeste */
-}
-/* Animación de entrada hero */
-.header .btn {
-  animation: fadeUp 0.8s ease forwards;
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-/* === ANIMACIÓN TÍTULO HERO === */
+/* =========================
+   ANIMACIÓN HERO TITLE
+========================= */
 .hero-title {
   opacity: 0;
   transform: translateY(14px);
   transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
-/* Cuando entra en pantalla */
 .hero-title.visible {
   opacity: 1;
   transform: translateY(0);
-}
-/* --- Separación de secciones con fondo suave --- */
-.section--light {
-  background: #f7f8fa; /* Gris suave */
-  padding: 80px 20px;
-}
-
-/* --- Cards flotantes y con sombra --- */
-.servicio-card {
-  background: #ffffff;
-  border-radius: 14px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06); /* sombra suave */
-  border: 1px solid rgba(0, 0, 0, 0.04); /* borde suave */
-}
-
-/* --- Sutil línea de color rojo en las cards --- */
-.servicio-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: #cc0000; /* Rojo corporativo */
-  border-radius: 14px 14px 0 0;
 }

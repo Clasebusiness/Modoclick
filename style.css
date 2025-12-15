@@ -226,3 +226,11 @@ body {
 .header .btn {
   margin-top: 1cm;
 }
+/* HERO SERVICIOS AUDIOVISUALES */
+.hero-audiovisuales {
+  background: linear-gradient(
+    180deg,
+    #f0f0f0 0%,
+    #ffffff 100%
+  );
+}

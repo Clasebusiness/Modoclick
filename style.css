@@ -180,3 +180,8 @@ body {
   border-radius: 16px;
   display: block;
 }
+.cta-inline {
+  margin-top: 30px;
+  font-weight: 600;
+  font-size: 18px;
+}

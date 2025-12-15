@@ -223,3 +223,6 @@ body {
 .servicio-link:hover {
   color: inherit;
 }
+.header .btn {
+  margin-top: 12px; /* ≈ 1 cm */
+}

@@ -185,3 +185,28 @@ body {
   font-weight: 600;
   font-size: 18px;
 }
+/* =========================
+   INDICADOR HOVER SERVICIOS
+   Línea azul superior
+========================= */
+.servicio-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.servicio-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--color-secundario);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.servicio-card:hover::before {
+  transform: scaleX(1);
+}

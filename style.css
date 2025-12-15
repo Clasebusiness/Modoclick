@@ -210,3 +210,16 @@ body {
 .servicio-card:hover::before {
   transform: scaleX(1);
 }
+/* =========================
+   SERVICIO COMPLETAMENTE CLICKEABLE
+========================= */
+.servicio-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.servicio-link:hover {
+  color: inherit;
+}

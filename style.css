@@ -93,10 +93,28 @@ body {
     box-shadow 0.25s ease;
 }
 
+.btn {
+  background: #f2f2f2; /* gris claro */
+  padding: 15px 32px;
+  color: #1a1a1a; /* texto oscuro */
+  border-radius: 10px;
+  text-decoration: none;
+  border: 1.5px solid rgba(0, 0, 0, 0.25); /* borde sutil */
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
 .btn:hover {
-  background: #dedede;
+  background: #e6e6e6; /* gris un poco más oscuro */
   transform: translateY(-3px);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);
+}
+
 }
 
 

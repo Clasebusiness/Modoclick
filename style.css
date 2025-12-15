@@ -230,7 +230,8 @@ body {
 .hero-audiovisuales {
   background: linear-gradient(
     180deg,
-    #f0f0f0 0%,
+    #e4e4e4 0%,
+    #f3f3f3 45%,
     #ffffff 100%
   );
 }

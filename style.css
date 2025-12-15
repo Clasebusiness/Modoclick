@@ -71,19 +71,26 @@ body {
   margin: 15px 0;
 }
 
-/* BOTÓN */
+/* =========================
+   BOTÓN (GRIS + BORDE NEGRO)
+========================= */
 .btn {
-  background: var(--color-secundario);
+  background: #f2f2f2;
   padding: 14px 28px;
-  color: white;
+  color: #1a1a1a;
   border-radius: 8px;
   text-decoration: none;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .btn:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(26, 26, 26, 0.22);
+  background: #e6e6e6;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 /* SECCIONES */
@@ -118,11 +125,48 @@ body {
   border-radius: 14px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.06);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .servicio-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 28px rgba(0,0,0,0.22);
+}
+
+/* =========================
+   INDICADOR HOVER SERVICIOS
+   Línea superior
+========================= */
+.servicio-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--color-secundario);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.servicio-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* =========================
+   SERVICIO COMPLETAMENTE CLICKEABLE
+========================= */
+.servicio-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.servicio-link:hover {
+  color: inherit;
 }
 
 /* PLAN */
@@ -180,53 +224,21 @@ body {
   border-radius: 16px;
   display: block;
 }
+
 .cta-inline {
   margin-top: 30px;
   font-weight: 600;
   font-size: 18px;
 }
-/* =========================
-   INDICADOR HOVER SERVICIOS
-   Línea azul superior
-========================= */
-.servicio-card {
-  position: relative;
-  overflow: hidden;
-}
 
-.servicio-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: var(--color-secundario);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s ease;
-}
-
-.servicio-card:hover::before {
-  transform: scaleX(1);
-}
-/* =========================
-   SERVICIO COMPLETAMENTE CLICKEABLE
-========================= */
-.servicio-link {
-  display: block;
-  color: inherit;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.servicio-link:hover {
-  color: inherit;
-}
+/* CTA HERO */
 .header .btn {
   margin-top: 1cm;
 }
-/* HERO SERVICIOS AUDIOVISUALES */
+
+/* =========================
+   HERO SERVICIOS AUDIOVISUALES
+========================= */
 .hero-audiovisuales {
   background: linear-gradient(
     180deg,

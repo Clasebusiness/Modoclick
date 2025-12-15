@@ -1,7 +1,3 @@
-// ===============================
-// ANIMACIONES ESTILO APPLE
-// ===============================
-
 const animatedItems = document.querySelectorAll(
   ".hero-title, .servicio-card, .plan-card"
 );

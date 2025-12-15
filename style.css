@@ -167,3 +167,15 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+/* =========================
+   ZOHO FORM AJUSTE TAMAÑO
+========================= */
+.zoho-form {
+  width: 100%;
+  max-width: 720px;     /* ancho más elegante */
+  height: 520px;        /* altura más contenida */
+  margin: 0 auto;       /* centrado */
+  border: none;
+  border-radius: 16px;
+  display: block;
+}

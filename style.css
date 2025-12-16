@@ -80,7 +80,7 @@ body {
 .btn {
   background: #03c6fc;
   padding: 15px 32px;
-  color: #fafafa;
+  color: #52e2ff;
   border-radius: 10px;
   text-decoration: none;
   border: 1.5px solid rgba(0, 0, 0, 0.25);
@@ -94,7 +94,7 @@ body {
 }
 
 .btn {
-  background: #f2f2f2; /* gris claro */
+  background: #52e2ff; /* gris claro */
   padding: 15px 32px;
   color: #1a1a1a; /* texto oscuro */
   border-radius: 10px;

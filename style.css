@@ -9,6 +9,7 @@
   --font-destacada: "Comfortaa", cursive;
 }
 
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -21,7 +22,9 @@ body {
   color: var(--color-texto);
 }
 
-/* NAVBAR */
+/* =========================
+   NAVBAR
+========================= */
 .navbar {
   position: sticky;
   top: 0;
@@ -47,7 +50,9 @@ body {
   color: var(--color-secundario);
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 .header {
   height: 500px;
   display: flex;
@@ -71,11 +76,12 @@ body {
   margin: 15px 0;
 }
 
+.header .btn {
+  margin-top: 1cm;
+}
+
 /* =========================
-   BOTÓN (GRIS + BORDE NEGRO)
-========================= */
-/* =========================
-   BOTÓN CTA PRINCIPAL (GRIS CON INTENCIÓN)
+   BOTÓN CTA
 ========================= */
 .btn {
   background: #52e2ff;
@@ -87,44 +93,18 @@ body {
   font-weight: 600;
   letter-spacing: 0.3px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-  transition:
-    background 0.25s ease,
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
-}
-
-
-.btn {
-  background: #52e2ff; /* gris claro */
-  padding: 15px 32px;
-  color: #080808; /* texto oscuro */
-  border-radius: 10px;
-  text-decoration: none;
-  border: 1.5px solid rgba(0, 0, 0, 0.25); /* borde sutil */
-  font-weight: 600;
-  letter-spacing: 0.3px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-  transition:
-    background 0.25s ease,
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
+  transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .btn:hover {
-  background: #e6e6e6; /* gris un poco más oscuro */
+  background: #e6e6e6;
   transform: translateY(-3px);
   box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);
 }
 
-
-
-.btn:hover {
-  background: #e6e6e6;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-}
-
-/* SECCIONES */
+/* =========================
+   SECCIONES
+========================= */
 .section {
   padding: 80px 10%;
   text-align: center;
@@ -142,7 +122,15 @@ body {
   );
 }
 
-/* SERVICIOS */
+.cta-inline {
+  margin-top: 30px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+/* =========================
+   SERVICIOS
+========================= */
 .servicios-lista {
   list-style: none;
   max-width: 900px;
@@ -165,10 +153,6 @@ body {
   box-shadow: 0 12px 28px rgba(0,0,0,0.22);
 }
 
-/* =========================
-   INDICADOR HOVER SERVICIOS
-   Línea superior
-========================= */
 .servicio-card::before {
   content: "";
   position: absolute;
@@ -186,24 +170,23 @@ body {
   transform: scaleX(1);
 }
 
-/* =========================
-   SERVICIO COMPLETAMENTE CLICKEABLE
-========================= */
 .servicio-link {
   display: block;
   color: inherit;
   text-decoration: none;
-  cursor: pointer;
 }
 
-.servicio-link:hover {
-  color: inherit;
+/* =========================
+   PLANES
+========================= */
+.planes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
 }
 
-/* PLAN */
 .plan-card {
-  max-width: 300px;
-  margin: auto;
   padding: 30px;
   border-radius: 14px;
   background: linear-gradient(
@@ -212,6 +195,24 @@ body {
     rgba(41, 205, 255, 0.12) 100%
   );
   box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Card clickeable */
+.plan-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.plan-link * {
+  color: inherit;
+  text-decoration: none;
+}
+
+.plan-link:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(0,0,0,0.18);
 }
 
 .price {
@@ -219,15 +220,15 @@ body {
   color: var(--color-secundario);
 }
 
-/* FOOTER */
-.footer {
-  background: black;
-  color: white;
-  text-align: center;
-  padding: 30px 10%;
+.plan-intro {
+  margin-top: 12px;
+  font-size: 15px;
+  line-height: 1.5;
 }
 
-/* ANIMACIONES */
+/* =========================
+   ANIMACIONES
+========================= */
 .hero-title,
 .servicio-card,
 .plan-card {
@@ -244,7 +245,7 @@ body {
 }
 
 /* =========================
-   ZOHO FORM AJUSTE TAMAÑO
+   ZOHO FORM
 ========================= */
 .zoho-form {
   width: 100%;
@@ -256,19 +257,18 @@ body {
   display: block;
 }
 
-.cta-inline {
-  margin-top: 30px;
-  font-weight: 600;
-  font-size: 18px;
-}
-
-/* CTA HERO */
-.header .btn {
-  margin-top: 1cm;
+/* =========================
+   FOOTER
+========================= */
+.footer {
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 30px 10%;
 }
 
 /* =========================
-   HERO SERVICIOS AUDIOVISUALES
+   HERO AUDIOVISUALES
 ========================= */
 .hero-audiovisuales {
   background: linear-gradient(
@@ -277,25 +277,4 @@ body {
     #f3f3f3 45%,
     #ffffff 100%
   );
-}
-/* =========================
-   GRID PLANES
-========================= */
-.planes-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.plan-features {
-  list-style: none;
-  margin: 20px 0;
-  padding: 0;
-}
-
-.plan-features li {
-  padding: 6px 0;
-  font-size: 15px;
-  color: var(--color-texto);
 }

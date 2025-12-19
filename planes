@@ -16,7 +16,7 @@
     rel="stylesheet" />
 
   <!-- Usa el MISMO CSS global -->
-  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/style.css" >
 </head>
 
 <body>

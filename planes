@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Plan Presencia Activa | ModoClick</title>
+
+  <meta name="description"
+    content="Plan Presencia Activa de ModoClick. Optimiza tu Google Maps, mejora tu visibilidad local y comienza a recibir más consultas." />
+
+  <link rel="icon" type="image/png" href="/img/favicon.png" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Lato:wght@400;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- CSS GLOBAL -->
+  <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="/" class="logo-link"><strong>Modo Click</strong></a>
+    </div>
+
+    <div class="menu">
+      <a href="/#servicios">Servicios</a>
+      <a href="/#planes">Planes</a>
+      <a href="/#contacto">Contacto</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="header">
+    <h1 class="hero-title">Plan Presencia Activa</h1>
+    <p>Optimiza tu presencia en Google y empieza a recibir más clientes</p>
+  </header>
+
+  <!-- CONTENIDO -->
+  <section class="section">
+    <div class="container">
+      <h2>¿Qué incluye este plan?</h2>
+
+      <ul class="plan-features">
+        <li>Optimización completa de Google Maps</li>
+        <li>SEO local (descripción, categorías y servicios)</li>
+        <li>Orden y mejora de fotografías</li>
+        <li>Estrategia inicial de reseñas</li>
+        <li>Asesoría para perfil de Instagram</li>
+        <li>Guía de contenido (qué publicar y cómo)</li>
+        <li>Informe mensual simple</li>
+      </ul>
+
+      <p class="price">Desde $79.990 CLP / mes</p>
+
+      <a
+        href="https://wa.me/56954747361?text=Hola%20quiero%20el%20diagnóstico%20gratuito%20del%20Plan%20Presencia%20Activa"
+        class="btn"
+        target="_blank"
+        rel="noopener">
+        Solicitar diagnóstico gratuito
+      </a>
+    </div>
+  </section>
+
+  <!-- PRUEBA SOCIAL -->
+  <section class="section section--light">
+    <h2>Resultados reales</h2>
+    <p>Negocios locales que hoy reciben más llamadas y visitas gracias a este plan.</p>
+
+    <!-- Aquí luego puedes agregar logos, testimonios o métricas -->
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; 2025 ModoClick. Todos los derechos reservados.</p>
+    <p>Lun a Vie – 10:00 a 19:00 | Sáb – 11:00 a 16:00</p>
+  </footer>
+
+</body>
+</html>

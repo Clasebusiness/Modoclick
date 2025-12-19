@@ -78,9 +78,9 @@ body {
    BOTÓN CTA PRINCIPAL (GRIS CON INTENCIÓN)
 ========================= */
 .btn {
-  background: #03c6fc;
+  background: #52e2ff;
   padding: 15px 32px;
-  color: #52e2ff;
+  color: #080808;
   border-radius: 10px;
   text-decoration: none;
   border: 1.5px solid rgba(0, 0, 0, 0.25);
@@ -92,6 +92,7 @@ body {
     transform 0.25s ease,
     box-shadow 0.25s ease;
 }
+
 
 .btn {
   background: #52e2ff; /* gris claro */
@@ -277,4 +278,25 @@ body {
     #f3f3f3 45%,
     #ffffff 100%
   );
+}
+/* =========================
+   GRID PLANES
+========================= */
+.planes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.plan-features {
+  list-style: none;
+  margin: 20px 0;
+  padding: 0;
+}
+
+.plan-features li {
+  padding: 6px 0;
+  font-size: 15px;
+  color: var(--color-texto);
 }

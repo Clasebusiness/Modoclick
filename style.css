@@ -278,3 +278,31 @@ body {
     #ffffff 100%
   );
 }
+/* =========================
+   SLIDER PLANES (DESKTOP + MOBILE)
+========================= */
+
+.planes-slider-wrapper {
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.planes-slider {
+  display: flex;
+  gap: 30px;
+  transition: transform 0.6s ease;
+  will-change: transform;
+}
+
+.plan-card {
+  min-width: 320px;
+  max-width: 360px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .plan-card {
+    min-width: 85%;
+  }
+}

@@ -278,3 +278,20 @@ body {
     #ffffff 100%
   );
 }
+/* =========================
+   BOTONES PLANES (ORDEN Y ESPACIADO)
+========================= */
+
+.plan-card .btn {
+  display: block;
+  width: 100%;
+  margin-top: 14px;
+  text-align: center;
+}
+
+/* Botón secundario (Plan Premium) */
+.plan-card .btn:nth-of-type(2) {
+  background: #f2f2f2;
+  color: #1a1a1a;
+  border: 1.5px solid rgba(0, 0, 0, 0.25);
+}

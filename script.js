@@ -22,3 +22,36 @@ animatedItems.forEach((item) => {
     observer.unobserve(item);
   }
 });
+/* =========================
+   SLIDER PLANES AUTO
+========================= */
+const slider = document.getElementById("planesSlider");
+const slides = slider.querySelectorAll(".slider-item");
+
+let currentIndex = 0;
+let sliderInterval;
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.toggle("active", i === index);
+  });
+}
+
+function startSlider() {
+  sliderInterval = setInterval(() => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    showSlide(currentIndex);
+  }, 4500);
+}
+
+function stopSlider() {
+  clearInterval(sliderInterval);
+}
+
+slider.addEventListener("mouseenter", stopSlider);
+slider.addEventListener("mouseleave", startSlider);
+slider.addEventListener("touchstart", stopSlider);
+slider.addEventListener("touchend", startSlider);
+
+showSlide(currentIndex);
+startSlider();

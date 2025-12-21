@@ -295,3 +295,29 @@ body {
   color: #1a1a1a;
   border: 1.5px solid rgba(0, 0, 0, 0.25);
 }
+/* =========================
+   SLIDER PLANES
+========================= */
+.planes-slider {
+  position: relative;
+  max-width: 360px;
+  margin: 40px auto 0;
+}
+
+.slider-item {
+  display: none;
+}
+
+.slider-item.active {
+  display: block;
+}
+
+.btn-secondary {
+  margin-top: 16px;
+  background: #f2f2f2;
+  color: #1a1a1a;
+}
+
+.btn-secondary:hover {
+  background: #e6e6e6;
+}

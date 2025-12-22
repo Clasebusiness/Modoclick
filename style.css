@@ -316,11 +316,11 @@ body {
 
 /* Baja el botón 2 cm en desktop y mobile */
 .header .btn {
-  margin-top: 2cm;
+  margin-top: 4cm;
 }
 /* =========================
    AJUSTE BOTÓN WHATSAPP SECCIÓN AUDIOVISUALES
 ========================= */
 .section .btn {
-  margin-top: 3cm;
+  margin-top: 5cm;
 }

@@ -22,7 +22,10 @@
 
   <!-- NAVBAR -->
   <nav class="navbar">
-    <strong>Modo Click</strong>
+    <div class="logo">
+      <a href="/" class="logo-link"><strong>Modo Click</strong></a>
+    </div>
+
     <div class="menu">
       <a href="#servicios">Servicios</a>
       <a href="#planes">Planes</a>
@@ -36,75 +39,106 @@
     <p>Campañas, posicionamiento y diseño para empresas que quieren destacar</p>
 
     <a
-      href="https://wa.me/56954747361"
+      href="https://wa.me/56954747361?text=Hola%20quiero%20asesoría%20para%20mejorar%20mi%20marca"
       class="btn"
-      target="_blank">
+      target="_blank"
+      rel="noopener">
       Quiero asesoría
     </a>
   </header>
 
   <!-- SERVICIOS -->
   <section class="section section--light" id="servicios">
-    <h2>Servicios</h2>
+    <div class="container">
+      <h2>Servicios</h2>
+      <p>En Modo Click te ayudamos a crecer con soluciones adaptadas a tu negocio:</p>
 
-    <ul class="servicios-lista">
-      <li class="servicio-card">Servicios Audiovisuales</li>
-      <li class="servicio-card">Campañas Publicitarias</li>
-      <li class="servicio-card">Posicionamiento SEO y SEM</li>
-      <li class="servicio-card">Redes Sociales</li>
-      <li class="servicio-card">Asesorías de Marketing</li>
-      <li class="servicio-card">Automatizaciones</li>
-    </ul>
+      <ul class="servicios-lista">
+
+        <li>
+          <a href="/servicios/audiovisuales.html" class="servicio-card servicio-link">
+            <strong>Servicios Audiovisuales</strong> – 
+            Creación de contenido profesional para marcas.
+          </a>
+        </li>
+
+        <li>
+          <a href="/servicios/campanas.html" class="servicio-card servicio-link">
+            <strong>Campañas Publicitarias</strong> – 
+            Publicidad digital estratégica para atraer clientes y vender más.
+          </a>
+        </li>
+
+        <li>
+          <a href="/servicios/seo-sem.html" class="servicio-card servicio-link">
+            <strong>Posicionamiento SEO y SEM</strong> – 
+            Optimización en buscadores y anuncios para captar clientes con intención.
+          </a>
+        </li>
+
+        <li>
+          <a href="/servicios/redes-sociales.html" class="servicio-card servicio-link">
+            <strong>Administración de Redes Sociales</strong> – 
+            Gestión profesional de contenido, comunidad y crecimiento de marca.
+          </a>
+        </li>
+
+        <li>
+         <a href="/servicios/asesorias-de-marketing.html" class="servicio-card servicio-link">
+  <strong>Asesorías de Marketing</strong> – 
+  Estrategias personalizadas para mejorar tu presencia online y aumentar tus ventas.
+</a>
+
+        </li>
+
+        <li>
+          <a href="/servicios/automatizaciones.html" class="servicio-card servicio-link">
+  <strong>Automatizaciones</strong> – Optimiza procesos y ahorra tiempo con sistemas automáticos.
+</a>
+
+        </li>
+
+      </ul>
+    </div>
   </section>
 
   <!-- PLANES -->
   <section class="section" id="planes">
-    <h2>Nuestros Planes</h2>
+    <div class="container">
+      <h2>Nuestros Planes</h2>
 
-    <div class="planes-slider" id="planesSlider">
-
-      <!-- PLAN BÁSICO -->
-      <div class="plan-card slider-item active">
+      <div class="plan-card">
         <h3>Plan Básico</h3>
         <p class="price">$89.990 CLP</p>
-        <p>Ideal para comenzar</p>
-
-        <a href="https://mpago.la/2TevaKy" class="btn">Comprar Plan</a>
-        <a href="/planes/pro.html" class="btn btn-secondary">Ver Plan Pro</a>
+        <p>Plan mensual ideal para captar los primeros clientes</p>
+        <a href="https://mpago.la/2TevaKy" target="_blank" class="btn" rel="noopener">
+          Comprar Plan
+        </a>
       </div>
-
-      <!-- PLAN PRO -->
-      <div class="plan-card slider-item">
-        <h3>Plan Pro</h3>
-        <p class="price">$149.990 CLP</p>
-        <p>Para escalar resultados</p>
-
-        <a href="https://wa.me/56954747361" class="btn">Quiero este plan</a>
-        <a href="/planes/premium.html" class="btn btn-secondary">Ver Plan Premium</a>
-      </div>
-
-      <!-- PLAN PREMIUM -->
-      <div class="plan-card slider-item">
-        <h3>Plan Premium</h3>
-        <p class="price">$249.990 CLP</p>
-        <p>Solución completa</p>
-
-        <a href="https://wa.me/56954747361" class="btn">Hablar por WhatsApp</a>
-      </div>
-
     </div>
   </section>
 
   <!-- CONTACTO -->
   <section class="section section-contact" id="contacto">
-    <iframe
-      class="zoho-form"
-      src="https://forms.zohopublic.com/jhernandezmodo1/form/ContactUs/formperma/oiraj8CL6WsPVhsv2yWeKzIzmcjP7EGdTq_XdL-j2Is">
-    </iframe>
+    <div class="container">
+      <iframe
+        class="zoho-form"
+        aria-label="HABLEMOS"
+        src="https://forms.zohopublic.com/jhernandezmodo1/form/ContactUs/formperma/oiraj8CL6WsPVhsv2yWeKzIzmcjP7EGdTq_XdL-j2Is"
+        frameborder="0"
+        loading="lazy">
+      </iframe>
+    </div>
   </section>
 
+  <!-- FOOTER -->
   <footer class="footer">
-    <p>© 2025 ModoClick. Todos los derechos reservados.</p>
+    <p>&copy; 2025 ModoClick. Todos los derechos reservados.</p>
+    <p>Lun a Vie – 10:00 a 19:00 | Sáb – 11:00 a 16:00</p>
+    <div class="footer-links">
+      <a href="https://www.instagram.com/modoclick.cl" target="_blank">@modoclick.cl</a>
+      <a href="mailto:contacto@modoclick.cl">contacto@modoclick.cl</a>
+    </div>
   </footer>
 
   <script src="script.js"></script>

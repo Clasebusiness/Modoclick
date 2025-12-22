@@ -321,3 +321,29 @@ body {
 .btn-secondary:hover {
   background: #e6e6e6;
 }
+/* =========================
+   SLIDER PLANES
+========================= */
+.planes-slider {
+  position: relative;
+  max-width: 360px;
+  margin: 40px auto 0;
+}
+
+.slider-item {
+  display: none;
+}
+
+.slider-item.active {
+  display: block;
+}
+
+.btn-secondary {
+  margin-top: 16px;
+  background: #f2f2f2;
+  color: #1a1a1a;
+}
+
+.btn-secondary:hover {
+  background: #e6e6e6;
+}

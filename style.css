@@ -307,14 +307,14 @@ body {
 
   /* Botón CTA hero */
   .header .btn {
-    margin-top: 2cm;     /* baja el botón */
+    margin-top: 3cm;     /* baja el botón */
   }
 }
 /* =========================
    AJUSTE BOTÓN HERO – TODAS LAS VISTAS
 ========================= */
 
-/* Baja el botón 2 cm en desktop y mobile */
+/* Baja el botón 5 cm en desktop y mobile */
 .header .btn {
   margin-top: 4cm;
 }

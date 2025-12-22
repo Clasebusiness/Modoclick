@@ -38,17 +38,6 @@ body {
   backdrop-filter: blur(8px);
 }
 
-.navbar a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: var(--color-texto);
-  font-weight: 600;
-}
-
-.navbar a:hover {
-  color: var(--color-secundario);
-}
-
 /* =========================
    HERO
 ========================= */
@@ -76,7 +65,7 @@ body {
 }
 
 /* =========================
-   BOTONES
+   BOTÓN
 ========================= */
 .btn {
   background: #52e2ff;
@@ -86,15 +75,12 @@ body {
   text-decoration: none;
   border: 1.5px solid rgba(0, 0, 0, 0.25);
   font-weight: 600;
-  letter-spacing: 0.3px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-  transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.25s ease;
 }
 
 .btn:hover {
-  background: #e6e6e6;
   transform: translateY(-3px);
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);
 }
 
 /* =========================
@@ -105,116 +91,33 @@ body {
   text-align: center;
 }
 
-.section--light {
-  background: #f7f8fa;
-}
-
-.section-contact {
-  background: linear-gradient(
-    180deg,
-    rgba(41, 205, 255, 0.12) 0%,
-    #ffffff 100%
-  );
-}
-
 /* =========================
-   SERVICIOS
+   FIX CLAVE – EVITAR MONTAJE
 ========================= */
-.servicios-lista {
-  list-style: none;
-  max-width: 900px;
-  margin: 30px auto 0;
+
+/* Texto previo al CTA */
+.section p:last-of-type {
+  margin-bottom: 80px; /* 👈 espacio REAL abajo del texto */
 }
 
-.servicio-card {
-  background: white;
-  padding: 22px 26px;
-  margin-bottom: 18px;
-  border-radius: 14px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  position: relative;
+/* Bloque CTA final */
+.cta-final {
+  padding-top: 60px;   /* 👈 espacio arriba del botón */
+  padding-bottom: 80px;
 }
 
-.servicio-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.22);
+/* Botón CTA final */
+.cta-final .btn {
+  margin-top: 0;       /* ya no se fuerza */
 }
 
 /* =========================
-   PLANES
-========================= */
-.planes-slider {
-  max-width: 1200px;
-  margin: 50px auto 0;
-}
-
-@media (min-width: 769px) {
-  .planes-slider {
-    display: flex;
-    justify-content: center;
-    gap: 1cm;
-  }
-
-  .planes-slider .slider-item {
-    display: block !important;
-    max-width: 360px;
-    flex: 1;
-  }
-}
-
-/* =========================
-   TARJETAS PLAN
-========================= */
-.plan-card {
-  padding: 36px 34px;
-  border-radius: 16px;
-  background: linear-gradient(
-    180deg,
-    #ffffff 0%,
-    rgba(41, 205, 255, 0.12) 100%
-  );
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.08);
-  text-align: center;
-}
-
-.plan-card .price {
-  font-size: 34px;
-  font-weight: 700;
-  color: var(--color-secundario);
-  margin: 12px 0;
-}
-
-/* =========================
-   FORMULARIO
-========================= */
-.zoho-form {
-  width: 100%;
-  max-width: 720px;
-  height: 520px;
-  margin: 0 auto;
-  border-radius: 16px;
-  border: none;
-}
-
-/* =========================
-   FOOTER
-========================= */
-.footer {
-  background: black;
-  color: white;
-  text-align: center;
-  padding: 30px 10%;
-}
-
-/* =========================
-   AJUSTES MOBILE
+   MOBILE
 ========================= */
 @media (max-width: 768px) {
 
   .header h1 {
     font-size: 34px;
-    line-height: 1.25;
     padding: 0 20px;
   }
 
@@ -223,25 +126,11 @@ body {
     padding: 0 20px;
   }
 
-  .header .btn {
-    margin-top: 32px;
-  }
-}
-
-/* =========================
-   FIX DEFINITIVO BOTÓN WHATSAPP – DESKTOP
-========================= */
-@media (min-width: 769px) {
-
-  /* Empuja TODA la sección CTA final hacia abajo */
-  .section:last-of-type {
-    padding-top: 160px;
-    position: relative;
-    z-index: 2;
+  .section p:last-of-type {
+    margin-bottom: 60px;
   }
 
-  /* Baja SOLO el botón */
-  .section:last-of-type .btn {
-    margin-top: 2.5cm;
+  .cta-final {
+    padding-top: 40px;
   }
 }

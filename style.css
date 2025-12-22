@@ -337,3 +337,18 @@ body {
 /* =========================
    AJUSTE BOTÓN WHATSAPP SECCIÓN AUDIOVISUALES
 ========================= */
+/* =========================
+   FIX SOLAPE BOTÓN WHATSAPP – DESKTOP
+========================= */
+@media (min-width: 769px) {
+
+  /* Sección CTA final */
+  .section:last-of-type {
+    padding-top: 140px; /* baja toda la sección */
+  }
+
+  /* Botón WhatsApp */
+  .section:last-of-type .btn {
+    margin-top: 2.5cm; /* baja SOLO el botón */
+  }
+}

@@ -1,12 +1,7 @@
 :root {
-  --color-primario: #000000;
   --color-secundario: #29cdff;
-  --color-fondo: #ffffff;
-  --color-texto: #0f0f0f;
-  --color-gris: #dddddd;
-
+  --color-texto: #1a1a1a;
   --font-principal: "Lato", sans-serif;
-  --font-destacada: "Comfortaa", cursive;
 }
 
 * {
@@ -17,7 +12,6 @@
 
 body {
   font-family: var(--font-principal);
-  background: var(--color-fondo);
   color: var(--color-texto);
 }
 
@@ -25,15 +19,11 @@ body {
 .navbar {
   position: sticky;
   top: 0;
-  z-index: 1000;
   padding: 18px 40px;
+  background: #fff;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.92);
-  border-top: 3px solid var(--color-secundario);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
 }
 
 .navbar a {
@@ -43,85 +33,38 @@ body {
   font-weight: 600;
 }
 
-.navbar a:hover {
-  color: var(--color-secundario);
-}
-
 /* HERO */
 .header {
   height: 500px;
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
   background: linear-gradient(
     180deg,
     #ffffff 0%,
-    rgba(41, 205, 255, 0.12) 100%
+    rgba(41,205,255,0.12) 100%
   );
 }
 
-.header h1 {
+.hero-title {
   font-size: 56px;
 }
 
-.header p {
-  font-size: 20px;
-  margin: 15px 0;
-}
-
-/* =========================
-   BOTÓN (GRIS + BORDE NEGRO)
-========================= */
-/* =========================
-   BOTÓN CTA PRINCIPAL (GRIS CON INTENCIÓN)
-========================= */
+/* BOTONES */
 .btn {
-  background: #03c6fc;
+  margin-top: 16px;
   padding: 15px 32px;
-  color: #52e2ff;
+  background: var(--color-secundario);
+  color: #000;
   border-radius: 10px;
+  border: 1.5px solid rgba(0,0,0,0.25);
   text-decoration: none;
-  border: 1.5px solid rgba(0, 0, 0, 0.25);
-  font-weight: 600;
-  letter-spacing: 0.3px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-  transition:
-    background 0.25s ease,
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
+  display: inline-block;
 }
 
-.btn {
-  background: #52e2ff; /* gris claro */
-  padding: 15px 32px;
-  color: #080808; /* texto oscuro */
-  border-radius: 10px;
-  text-decoration: none;
-  border: 1.5px solid rgba(0, 0, 0, 0.25); /* borde sutil */
-  font-weight: 600;
-  letter-spacing: 0.3px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-  transition:
-    background 0.25s ease,
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
-}
-
-.btn:hover {
-  background: #e6e6e6; /* gris un poco más oscuro */
-  transform: translateY(-3px);
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);
-}
-
-}
-
-
-.btn:hover {
-  background: #e6e6e6;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+.btn-secondary {
+  background: #f2f2f2;
 }
 
 /* SECCIONES */
@@ -134,83 +77,43 @@ body {
   background: #f7f8fa;
 }
 
-.section-contact {
-  background: linear-gradient(
-    180deg,
-    rgba(41, 205, 255, 0.12) 0%,
-    #ffffff 100%
-  );
-}
-
 /* SERVICIOS */
 .servicios-lista {
   list-style: none;
-  max-width: 900px;
+  max-width: 800px;
   margin: 30px auto 0;
 }
 
 .servicio-card {
   background: white;
-  padding: 20px 24px;
-  margin-bottom: 18px;
+  padding: 20px;
+  margin-bottom: 16px;
   border-radius: 14px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  position: relative;
-  overflow: hidden;
 }
 
-.servicio-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.22);
+/* PLANES */
+.planes-slider {
+  max-width: 360px;
+  margin: 40px auto;
 }
 
-/* =========================
-   INDICADOR HOVER SERVICIOS
-   Línea superior
-========================= */
-.servicio-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: var(--color-secundario);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s ease;
+.slider-item {
+  display: none;
 }
 
-.servicio-card:hover::before {
-  transform: scaleX(1);
-}
-
-/* =========================
-   SERVICIO COMPLETAMENTE CLICKEABLE
-========================= */
-.servicio-link {
+.slider-item.active {
   display: block;
-  color: inherit;
-  text-decoration: none;
-  cursor: pointer;
 }
 
-.servicio-link:hover {
-  color: inherit;
-}
-
-/* PLAN */
 .plan-card {
-  max-width: 300px;
-  margin: auto;
-  padding: 30px;
-  border-radius: 14px;
   background: linear-gradient(
     180deg,
     #ffffff 0%,
-    rgba(41, 205, 255, 0.12) 100%
+    rgba(41,205,255,0.12) 100%
   );
+  padding: 30px;
+  border-radius: 14px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.06);
 }
 
@@ -219,131 +122,25 @@ body {
   color: var(--color-secundario);
 }
 
-/* FOOTER */
-.footer {
-  background: black;
-  color: white;
-  text-align: center;
-  padding: 30px 10%;
+/* CONTACTO */
+.section-contact {
+  background: linear-gradient(
+    180deg,
+    rgba(41,205,255,0.12) 0%,
+    #ffffff 100%
+  );
 }
 
-/* ANIMACIONES */
-.hero-title,
-.servicio-card,
-.plan-card {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: 0.6s ease;
-}
-
-.hero-title.visible,
-.servicio-card.visible,
-.plan-card.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* =========================
-   ZOHO FORM AJUSTE TAMAÑO
-========================= */
 .zoho-form {
   width: 100%;
   max-width: 720px;
   height: 520px;
-  margin: 0 auto;
   border: none;
-  border-radius: 16px;
-  display: block;
 }
 
-.cta-inline {
-  margin-top: 30px;
-  font-weight: 600;
-  font-size: 18px;
-}
-
-/* CTA HERO */
-.header .btn {
-  margin-top: 1cm;
-}
-
-/* =========================
-   HERO SERVICIOS AUDIOVISUALES
-========================= */
-.hero-audiovisuales {
-  background: linear-gradient(
-    180deg,
-    #e4e4e4 0%,
-    #f3f3f3 45%,
-    #ffffff 100%
-  );
-}
-/* =========================
-   BOTONES PLANES (ORDEN Y ESPACIADO)
-========================= */
-
-.plan-card .btn {
-  display: block;
-  width: 100%;
-  margin-top: 14px;
-  text-align: center;
-}
-
-/* Botón secundario (Plan Premium) */
-.plan-card .btn:nth-of-type(2) {
-  background: #f2f2f2;
-  color: #1a1a1a;
-  border: 1.5px solid rgba(0, 0, 0, 0.25);
-}
-/* =========================
-   SLIDER PLANES
-========================= */
-.planes-slider {
-  position: relative;
-  max-width: 360px;
-  margin: 40px auto 0;
-}
-
-.slider-item {
-  display: none;
-}
-
-.slider-item.active {
-  display: block;
-}
-
-.btn-secondary {
-  margin-top: 16px;
-  background: #f2f2f2;
-  color: #1a1a1a;
-}
-
-.btn-secondary:hover {
-  background: #e6e6e6;
-}
-/* =========================
-   SLIDER PLANES
-========================= */
-.planes-slider {
-  position: relative;
-  max-width: 360px;
-  margin: 40px auto 0;
-}
-
-.slider-item {
-  display: none;
-}
-
-.slider-item.active {
-  display: block;
-}
-
-.btn-secondary {
-  margin-top: 16px;
-  background: #f2f2f2;
-  color: #1a1a1a;
-}
-
-.btn-secondary:hover {
-  background: #e6e6e6;
+/* FOOTER */
+.footer {
+  background: #000;
+  color: #fff;
+  padding: 30px;
 }

@@ -1,3 +1,7 @@
+/* =========================
+   ANIMACIONES AL SCROLL
+========================= */
+
 const animatedItems = document.querySelectorAll(
   ".hero-title, .servicio-card, .plan-card"
 );
@@ -22,37 +26,65 @@ animatedItems.forEach((item) => {
     observer.unobserve(item);
   }
 });
-// ========================
-// SLIDER PLANES AUTOMÁTICO
-// ========================
 
-const slides = document.querySelectorAll('.slider-item');
-let currentSlide = 0;
-let sliderInterval;
-const sliderTime = 4000; // 4 segundos (ideal)
+/* =========================
+   SLIDER PLANES (SOLO MÓVIL)
+========================= */
 
-function showSlide(index) {
-  slides.forEach(slide => slide.classList.remove('active'));
-  slides[index].classList.add('active');
+const slider = document.getElementById("planesSlider");
+
+if (slider) {
+  const slides = slider.querySelectorAll(".slider-item");
+  let currentSlide = 0;
+  let sliderInterval = null;
+  const SLIDER_TIME = 4000; // 4 segundos (elegante)
+
+  function isMobile() {
+    return window.innerWidth <= 768;
+  }
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle("active", i === index);
+    });
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  function startSlider() {
+    if (!isMobile()) return;
+    stopSlider();
+    sliderInterval = setInterval(nextSlide, SLIDER_TIME);
+  }
+
+  function stopSlider() {
+    if (sliderInterval) {
+      clearInterval(sliderInterval);
+      sliderInterval = null;
+    }
+  }
+
+  function initSlider() {
+    if (isMobile()) {
+      showSlide(currentSlide);
+      startSlider();
+    } else {
+      // Desktop: mostrar todas las tarjetas
+      slides.forEach(slide => slide.classList.add("active"));
+      stopSlider();
+    }
+  }
+
+  // UX: pausar al interactuar
+  slider.addEventListener("mouseenter", stopSlider);
+  slider.addEventListener("mouseleave", startSlider);
+  slider.addEventListener("touchstart", stopSlider, { passive: true });
+  slider.addEventListener("touchend", startSlider);
+
+  window.addEventListener("resize", initSlider);
+
+  initSlider();
 }
-
-function nextSlide() {
-  currentSlide = (currentSlide + 1) % slides.length;
-  showSlide(currentSlide);
-}
-
-function startSlider() {
-  sliderInterval = setInterval(nextSlide, sliderTime);
-}
-
-function stopSlider() {
-  clearInterval(sliderInterval);
-}
-
-const slider = document.getElementById('planesSlider');
-
-slider.addEventListener('mouseenter', stopSlider);
-slider.addEventListener('mouseleave', startSlider);
-slider.addEventListener('touchstart', stopSlider);
-
-startSlider();

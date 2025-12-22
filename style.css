@@ -349,6 +349,9 @@ body {
 
   /* Botón WhatsApp */
   .section:last-of-type .btn {
-    margin-top: 2.5cm; /* baja SOLO el botón */
+    margin-top: 5cm; /* baja SOLO el botón */
   }
+}
+.header .btn {
+  margin-top: 5cm;
 }

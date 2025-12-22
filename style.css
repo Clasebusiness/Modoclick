@@ -310,3 +310,11 @@ body {
     margin-top: 2cm;     /* baja el botón */
   }
 }
+/* =========================
+   AJUSTE BOTÓN HERO – TODAS LAS VISTAS
+========================= */
+
+/* Baja el botón 2 cm en desktop y mobile */
+.header .btn {
+  margin-top: 2cm;
+}

@@ -1,28 +1,24 @@
-const slider = document.getElementById("planesSlider");
-const slides = slider.querySelectorAll(".slider-item");
+const animatedItems = document.querySelectorAll(
+  ".hero-title, .servicio-card, .plan-card"
+);
 
-let index = 0;
-let interval;
+const observer = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.15 }
+);
 
-function showSlide(i) {
-  slides.forEach(s => s.classList.remove("active"));
-  slides[i].classList.add("active");
-}
+animatedItems.forEach((item) => {
+  observer.observe(item);
 
-function start() {
-  interval = setInterval(() => {
-    index = (index + 1) % slides.length;
-    showSlide(index);
-  }, 4500);
-}
-
-function stop() {
-  clearInterval(interval);
-}
-
-slider.addEventListener("mouseenter", stop);
-slider.addEventListener("mouseleave", start);
-slider.addEventListener("touchstart", stop);
-
-showSlide(0);
-start();
+  if (item.getBoundingClientRect().top < window.innerHeight) {
+    item.classList.add("visible");
+    observer.unobserve(item);
+  }
+});

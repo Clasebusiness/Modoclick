@@ -2971,3 +2971,75 @@ ul {
         transition-duration: 0.01ms !important;
     }
 }
+/* LOGOTIPO TIPOGRÁFICO MODO CLICK */
+
+.logo-text {
+    display: inline-block;
+    margin: 0;
+    color: #ffffff;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.06em;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.logo-text > span {
+    color: transparent;
+    background: linear-gradient(
+        90deg,
+        #2563eb 0%,
+        #3b82f6 50%,
+        #60a5fa 100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.home-logo {
+    display: inline-flex;
+    align-items: center;
+    min-width: max-content;
+    padding: 8px 0;
+}
+
+.home-logo:hover .logo-text {
+    filter: drop-shadow(
+        0 0 16px rgba(59, 130, 246, 0.35)
+    );
+}
+
+.footer-logo-text {
+    font-size: 2.4rem;
+}
+
+/* EVITA QUE LOS ELEMENTOS DEL HERO QUEDEN CORTADOS */
+
+.hero {
+    overflow: hidden;
+}
+
+.visual-shell {
+    overflow: visible;
+}
+
+.floating-card-one {
+    right: 18px;
+}
+
+.floating-card-two {
+    left: 18px;
+}
+
+@media (max-width: 800px) {
+    .logo-text {
+        font-size: 1.65rem;
+    }
+
+    .footer-logo-text {
+        font-size: 2rem;
+    }
+}

@@ -10,19 +10,12 @@
 
     <meta
         name="description"
-        content="Modo Click es una agencia digital especializada en branding, diseño web, marketing, automatización, contenido y crecimiento empresarial."
+        content="Modo Click es una agencia digital especializada en branding, diseño web, marketing, automatización, inteligencia artificial y crecimiento empresarial."
     >
 
-    <meta
-        name="keywords"
-        content="agencia digital, diseño web, marketing digital, branding, redes sociales, automatización, Santiago de Chile"
-    >
+    <meta name="theme-color" content="#050914">
 
-    <meta name="author" content="Modo Click">
-
-    <meta name="theme-color" content="#07070a">
-
-    <title>Modo Click | Agencia de crecimiento digital</title>
+    <title>Modo Click | Herramientas digitales para hacer crecer tu negocio</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
@@ -42,28 +35,25 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     >
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
     <div class="page-noise"></div>
     <div class="cursor-glow"></div>
 
-    <header class="site-header" id="inicio">
+    <header class="site-header">
         <div class="container nav-container">
             <a
                 href="#inicio"
-                class="brand"
-                aria-label="Ir al inicio"
+                class="brand home-logo"
+                aria-label="Volver al inicio de Modo Click"
             >
-                <span class="brand-symbol" aria-hidden="true">
-                    <span class="brand-arrow"></span>
-                </span>
-
-                <span class="brand-copy">
-                    <strong>MODO</strong>
-                    <span>CLICK</span>
-                </span>
+                <img
+                    src="./assets/logo-modoclick.jpg"
+                    alt="Modo Click"
+                    class="brand-logo"
+                >
             </a>
 
             <nav class="desktop-nav" aria-label="Navegación principal">
@@ -80,7 +70,7 @@
                     href="mailto:contacto@modoclick.cl"
                 >
                     <span class="status-dot"></span>
-                    Hablemos
+                    Disponible
                 </a>
 
                 <a
@@ -88,6 +78,7 @@
                     class="button button-small button-primary magnetic"
                 >
                     Cotizar proyecto
+
                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
                 </a>
 
@@ -127,7 +118,10 @@
     </header>
 
     <main>
-        <section class="hero section-dark">
+        <section
+            class="hero section-dark"
+            id="inicio"
+        >
             <div class="hero-orb hero-orb-one"></div>
             <div class="hero-orb hero-orb-two"></div>
             <div class="hero-grid"></div>
@@ -144,14 +138,17 @@
 
                     <h1>
                         Convertimos ideas en
-                        <span class="gradient-text">marcas que venden.</span>
+
+                        <span class="gradient-text">
+                            marcas que venden.
+                        </span>
                     </h1>
 
                     <p class="hero-description">
                         Diseñamos marcas, páginas web, campañas,
                         automatizaciones y sistemas digitales preparados para
                         atraer clientes, aumentar ventas y hacer crecer tu
-                        empresa.
+                        negocio.
                     </p>
 
                     <div class="hero-actions">
@@ -192,8 +189,8 @@
                             </div>
 
                             <p>
-                                Estrategia, creatividad y tecnología
-                                trabajando en una sola dirección.
+                                Estrategia, creatividad y tecnología trabajando
+                                en una sola dirección.
                             </p>
                         </div>
                     </div>
@@ -228,19 +225,24 @@
                                 </h2>
 
                                 <p>
-                                    Marca, web, contenido, anuncios y
-                                    automatización conectados.
+                                    Marca, web, contenido, anuncios,
+                                    inteligencia artificial y automatización
+                                    conectados.
                                 </p>
 
-                                <div class="visual-button">
+                                <a
+                                    href="#cotizador"
+                                    class="visual-button"
+                                >
                                     Activar crecimiento
+
                                     <i class="fa-solid fa-arrow-right"></i>
-                                </div>
+                                </a>
                             </div>
 
                             <div class="visual-dashboard">
                                 <div class="dashboard-heading">
-                                    <span>Rendimiento</span>
+                                    <span>Rendimiento digital</span>
 
                                     <span class="dashboard-period">
                                         Últimos 30 días
@@ -260,14 +262,14 @@
                                 </div>
 
                                 <div class="chart">
-                                    <span style="height: 30%"></span>
-                                    <span style="height: 45%"></span>
-                                    <span style="height: 38%"></span>
-                                    <span style="height: 60%"></span>
-                                    <span style="height: 55%"></span>
-                                    <span style="height: 72%"></span>
+                                    <span style="height: 28%"></span>
+                                    <span style="height: 39%"></span>
+                                    <span style="height: 48%"></span>
+                                    <span style="height: 43%"></span>
+                                    <span style="height: 62%"></span>
+                                    <span style="height: 71%"></span>
                                     <span style="height: 84%"></span>
-                                    <span style="height: 95%"></span>
+                                    <span style="height: 96%"></span>
                                 </div>
 
                                 <div class="dashboard-data">
@@ -290,7 +292,7 @@
                         </div>
 
                         <div class="floating-card floating-card-one">
-                            <span class="floating-icon red">
+                            <span class="floating-icon blue">
                                 <i class="fa-solid fa-bullseye"></i>
                             </span>
 
@@ -301,7 +303,7 @@
                         </div>
 
                         <div class="floating-card floating-card-two">
-                            <span class="floating-icon purple">
+                            <span class="floating-icon light-blue">
                                 <i class="fa-solid fa-wand-magic-sparkles"></i>
                             </span>
 
@@ -329,14 +331,20 @@
             </div>
         </section>
 
-        <section class="section section-light" id="servicios">
+        <section
+            class="section section-light"
+            id="servicios"
+        >
             <div class="container">
                 <div class="section-heading reveal">
                     <div>
-                        <span class="section-kicker">Qué hacemos</span>
+                        <span class="section-kicker">
+                            Qué hacemos
+                        </span>
 
                         <h2>
                             Todo lo que tu negocio necesita
+
                             <span>para crecer.</span>
                         </h2>
                     </div>
@@ -344,7 +352,7 @@
                     <p>
                         No entregamos piezas aisladas. Creamos ecosistemas
                         digitales que conectan estrategia, comunicación,
-                        tecnología y ventas.
+                        tecnología, automatización y ventas.
                     </p>
                 </div>
 
@@ -401,7 +409,7 @@
                             <li>Landing pages</li>
                             <li>Sitios corporativos</li>
                             <li>Tiendas online</li>
-                            <li>Optimización móvil</li>
+                            <li>Diseño responsive</li>
                         </ul>
 
                         <div class="service-art web-art">
@@ -431,7 +439,7 @@
                             <li>Google Ads</li>
                             <li>Meta Ads</li>
                             <li>Embudo de ventas</li>
-                            <li>Analítica y optimización</li>
+                            <li>Analítica</li>
                         </ul>
 
                         <div class="service-art marketing-art">
@@ -460,9 +468,9 @@
 
                         <ul>
                             <li>Dirección creativa</li>
-                            <li>Diseño de publicaciones</li>
+                            <li>Publicaciones</li>
                             <li>Reels y campañas</li>
-                            <li>Calendario de contenido</li>
+                            <li>Calendario mensual</li>
                         </ul>
 
                         <div class="service-art social-art">
@@ -485,14 +493,14 @@
 
                         <p>
                             Reducimos tareas repetitivas y conectamos
-                            herramientas para que tu negocio opere mejor.
+                            herramientas para que tu empresa opere mejor.
                         </p>
 
                         <ul>
-                            <li>WhatsApp y formularios</li>
+                            <li>WhatsApp</li>
                             <li>Automatización de leads</li>
                             <li>Inteligencia artificial</li>
-                            <li>Integraciones empresariales</li>
+                            <li>Integraciones</li>
                         </ul>
 
                         <div class="service-art automation-art">
@@ -507,7 +515,9 @@
                     </article>
 
                     <article class="service-card service-card-cta reveal">
-                        <span class="section-kicker">Proyecto integral</span>
+                        <span class="section-kicker">
+                            Proyecto integral
+                        </span>
 
                         <h3>
                             ¿Necesitas varios servicios trabajando juntos?
@@ -534,14 +544,20 @@
             </div>
         </section>
 
-        <section class="section section-projects" id="proyectos">
+        <section
+            class="section section-projects"
+            id="proyectos"
+        >
             <div class="container">
                 <div class="section-heading section-heading-dark reveal">
                     <div>
-                        <span class="section-kicker">Nuestro trabajo</span>
+                        <span class="section-kicker">
+                            Nuestro trabajo
+                        </span>
 
                         <h2>
                             Creamos experiencias que
+
                             <span>se sienten diferentes.</span>
                         </h2>
                     </div>
@@ -569,7 +585,7 @@
                             data-project="crack"
                         >
                             <span>02</span>
-                            Dari Studio
+                            Crack
                         </button>
 
                         <button
@@ -600,9 +616,13 @@
                                             Premium barber experience
                                         </span>
 
-                                        <h3>CLASE<br>BUSINESS</h3>
+                                        <h3>
+                                            CLASE
+                                            <br>
+                                            BUSINESS
+                                        </h3>
 
-                                        <div class="preview-red-line"></div>
+                                        <div class="preview-blue-line"></div>
 
                                         <p>
                                             Imagen, experiencia y crecimiento
@@ -636,6 +656,7 @@
 
                                 <a href="#cotizador">
                                     Crear algo similar
+
                                     <i class="fa-solid fa-arrow-right"></i>
                                 </a>
                             </div>
@@ -650,7 +671,9 @@
                                 <div class="crack-bubble bubble-two"></div>
 
                                 <div class="crack-package">
-                                    <span class="crack-logo">CRACK</span>
+                                    <span class="crack-logo">
+                                        CRACK
+                                    </span>
 
                                     <small>
                                         Limpieza poderosa
@@ -684,6 +707,7 @@
 
                                 <a href="#cotizador">
                                     Crear algo similar
+
                                     <i class="fa-solid fa-arrow-right"></i>
                                 </a>
                             </div>
@@ -702,7 +726,7 @@
 
                                 <div class="lock-copy">
                                     <strong>CERRAJERO</strong>
-                                    <span>CERRAJEROCARPINTERO.CL</span>
+                                    <span>CARPINTERO.CL</span>
                                 </div>
                             </div>
 
@@ -716,8 +740,8 @@
 
                                     <p>
                                         Creación de marca, estructura comercial,
-                                        presencia web y sistema de captación
-                                        para servicios a domicilio.
+                                        presencia web y captación para servicios
+                                        a domicilio.
                                     </p>
                                 </div>
 
@@ -730,6 +754,7 @@
 
                                 <a href="#cotizador">
                                     Crear algo similar
+
                                     <i class="fa-solid fa-arrow-right"></i>
                                 </a>
                             </div>
@@ -764,7 +789,7 @@
                         </strong>
 
                         <p>
-                            Sistemas digitales trabajando incluso fuera de horario.
+                            Sistemas trabajando incluso fuera del horario.
                         </p>
                     </article>
 
@@ -781,13 +806,19 @@
             </div>
         </section>
 
-        <section class="section section-method" id="metodo">
+        <section
+            class="section section-method"
+            id="metodo"
+        >
             <div class="container method-layout">
                 <div class="method-copy reveal">
-                    <span class="section-kicker">Nuestra forma de trabajar</span>
+                    <span class="section-kicker">
+                        Nuestra forma de trabajar
+                    </span>
 
                     <h2>
                         Una metodología clara.
+
                         <span>Un objetivo medible.</span>
                     </h2>
 
@@ -909,14 +940,20 @@
             </div>
         </section>
 
-        <section class="section section-plans" id="planes">
+        <section
+            class="section section-plans"
+            id="planes"
+        >
             <div class="container">
                 <div class="section-heading reveal">
                     <div>
-                        <span class="section-kicker">Formas de trabajar</span>
+                        <span class="section-kicker">
+                            Formas de trabajar
+                        </span>
 
                         <h2>
                             Elige el nivel de impulso
+
                             <span>que necesita tu negocio.</span>
                         </h2>
                     </div>
@@ -963,7 +1000,7 @@
 
                             <li>
                                 <i class="fa-solid fa-check"></i>
-                                Configuración básica de analítica
+                                Analítica básica
                             </li>
                         </ul>
 
@@ -973,6 +1010,7 @@
                             data-plan="Launch"
                         >
                             Solicitar propuesta
+
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </article>
@@ -1030,6 +1068,7 @@
                             data-plan="Scale"
                         >
                             Solicitar propuesta
+
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </article>
@@ -1073,7 +1112,7 @@
 
                             <li>
                                 <i class="fa-solid fa-check"></i>
-                                Reportes de rendimiento
+                                Reportes
                             </li>
                         </ul>
 
@@ -1083,6 +1122,7 @@
                             data-plan="Partner"
                         >
                             Solicitar propuesta
+
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </article>
@@ -1090,17 +1130,23 @@
             </div>
         </section>
 
-        <section class="section section-quote" id="cotizador">
+        <section
+            class="section section-quote"
+            id="cotizador"
+        >
             <div class="quote-background-text">
                 MODO CLICK
             </div>
 
             <div class="container quote-layout">
                 <div class="quote-copy reveal">
-                    <span class="section-kicker">Cuéntanos tu proyecto</span>
+                    <span class="section-kicker">
+                        Cuéntanos tu proyecto
+                    </span>
 
                     <h2>
                         Tu próximo crecimiento
+
                         <span>puede comenzar aquí.</span>
                     </h2>
 
@@ -1244,6 +1290,7 @@
                                 class="button button-primary form-next"
                             >
                                 Continuar
+
                                 <i class="fa-solid fa-arrow-right"></i>
                             </button>
                         </div>
@@ -1257,7 +1304,7 @@
                         <h3>¿Cuál es tu objetivo principal?</h3>
 
                         <p>
-                            Esto nos permite entender mejor la prioridad del proyecto.
+                            Esto nos permite comprender la prioridad del proyecto.
                         </p>
 
                         <div class="objective-options">
@@ -1426,13 +1473,19 @@
             </div>
         </section>
 
-        <section class="section section-contact" id="contacto">
+        <section
+            class="section section-contact"
+            id="contacto"
+        >
             <div class="container contact-card reveal">
                 <div class="contact-main">
-                    <span class="section-kicker">Construyamos algo grande</span>
+                    <span class="section-kicker">
+                        Construyamos algo grande
+                    </span>
 
                     <h2>
                         Una buena idea necesita
+
                         <span>una ejecución a su altura.</span>
                     </h2>
 
@@ -1441,6 +1494,7 @@
                         class="contact-email"
                     >
                         contacto@modoclick.cl
+
                         <i class="fa-solid fa-arrow-up-right-from-square"></i>
                     </a>
                 </div>
@@ -1483,20 +1537,20 @@
     <footer class="site-footer">
         <div class="container footer-grid">
             <div>
-                <a href="#inicio" class="brand footer-brand">
-                    <span class="brand-symbol" aria-hidden="true">
-                        <span class="brand-arrow"></span>
-                    </span>
-
-                    <span class="brand-copy">
-                        <strong>MODO</strong>
-                        <span>CLICK</span>
-                    </span>
+                <a
+                    href="#inicio"
+                    class="brand footer-brand home-logo"
+                    aria-label="Regresar al inicio"
+                >
+                    <img
+                        src="./assets/logo-modoclick.jpg"
+                        alt="Modo Click"
+                        class="footer-logo"
+                    >
                 </a>
 
                 <p>
-                    Estrategia, creatividad y tecnología para transformar
-                    negocios.
+                    Herramientas digitales para hacer crecer tu negocio.
                 </p>
             </div>
 
@@ -1537,7 +1591,8 @@
 
         <div class="container footer-bottom">
             <span>
-                © <span id="year"></span> Modo Click. Todos los derechos reservados.
+                © <span id="year"></span> Modo Click.
+                Todos los derechos reservados.
             </span>
 
             <span>
@@ -1554,10 +1609,9 @@
         aria-label="Contactar por WhatsApp"
     >
         <i class="fa-brands fa-whatsapp"></i>
-
         <span>Hablemos</span>
     </a>
 
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>

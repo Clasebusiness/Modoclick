@@ -1,207 +1,419 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#020817" />
-  <meta name="description" content="Modo Click: marketing, diseño, desarrollo web, automatización e IA para empresas que quieren crecer." />
-  <title>Modo Click | Marketing, diseño y desarrollo web</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Modo Click: estrategia, branding, desarrollo web, contenido, publicidad y automatización para marcas que quieren crecer." />
+  <meta name="theme-color" content="#09090b" />
+  <title>Modo Click — Agencia creativa y digital</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="noise" aria-hidden="true"></div>
   <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
 
-  <header class="site-header" id="top">
-    <a href="#inicio" class="brand" aria-label="Modo Click - Inicio">
-      <img src="assets/logo-modoclick.jpeg" alt="Logo Modo Click" />
+  <header class="site-header" id="inicio">
+    <a class="brand" href="#inicio" aria-label="Modo Click, volver al inicio">
+      <span class="brand-mark" aria-hidden="true">
+        <span class="brand-arrow">↗</span>
+      </span>
+      <span class="brand-name">MODO<span>CLICK</span></span>
     </a>
 
-    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
-      <span></span><span></span>
-    </button>
-
-    <nav class="main-nav" aria-label="Navegación principal">
-      <a href="#inicio" class="active">Inicio</a>
+    <nav class="desktop-nav" aria-label="Navegación principal">
       <a href="#servicios">Servicios</a>
+      <a href="#metodo">Método</a>
       <a href="#proyectos">Proyectos</a>
-      <a href="#proceso">Proceso</a>
-      <a href="#agencia">Agencia</a>
-      <a href="#contacto">Contacto</a>
+      <a href="#planes">Planes</a>
     </nav>
 
-    <a class="btn btn-small btn-primary header-cta" href="#cotizacion">Solicitar propuesta <span>→</span></a>
+    <a class="button button-sm button-outline header-cta" href="#cotizador">Cotizar proyecto</a>
+
+    <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span>
+    </button>
   </header>
 
+  <div class="mobile-menu" aria-hidden="true">
+    <a href="#servicios">Servicios</a>
+    <a href="#metodo">Método</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#planes">Planes</a>
+    <a href="#cotizador">Cotizar proyecto</a>
+  </div>
+
   <main>
-    <section class="hero section-shell" id="inicio">
+    <section class="hero section-dark">
+      <div class="hero-orb hero-orb-one"></div>
+      <div class="hero-orb hero-orb-two"></div>
       <div class="hero-grid"></div>
-      <div class="orb orb-one"></div>
-      <div class="orb orb-two"></div>
+
       <div class="hero-content reveal">
-        <div class="eyebrow"><span></span> Agencia creativa + tecnología</div>
+        <p class="eyebrow"><span></span> Agencia creativa, digital y estratégica</p>
         <h1>
-          Diseñamos marcas.<br>
-          <span>Desarrollamos experiencias.</span><br>
-          Impulsamos negocios.
+          Convertimos ideas en
+          <span class="gradient-text">marcas que venden.</span>
         </h1>
-        <p>Marketing, diseño y desarrollo web para empresas que quieren verse mejor, conectar con sus clientes y crecer.</p>
+        <p class="hero-copy">
+          Estrategia, identidad, contenido, campañas, páginas web y automatización en un solo equipo. Creamos experiencias digitales que llaman la atención y generan resultados.
+        </p>
         <div class="hero-actions">
-          <a class="btn btn-primary magnetic" href="#cotizacion">Solicitar propuesta <span>↗</span></a>
-          <a class="btn btn-secondary magnetic" href="#proyectos">Ver proyectos <span>▶</span></a>
+          <a class="button button-primary magnetic" href="#cotizador">Quiero potenciar mi marca <span>↗</span></a>
+          <a class="text-link" href="#proyectos">Ver nuestra potencia <span>↓</span></a>
         </div>
-        <div class="trust-row">
-          <div class="avatar-stack"><span>CB</span><span>CC</span><span>CR</span></div>
-          <div><strong>+50 proyectos impulsados</strong><small>Diseño, estrategia y tecnología</small></div>
+        <div class="hero-proof">
+          <div class="avatars" aria-hidden="true">
+            <span>MC</span><span>CB</span><span>AI</span><span>+</span>
+          </div>
+          <div>
+            <strong>Soluciones 360°</strong>
+            <p>Diseño, tecnología y crecimiento conectados.</p>
+          </div>
         </div>
       </div>
 
-      <div class="hero-visual reveal delay-1" aria-label="Vista previa de proyectos digitales">
-        <div class="device laptop">
-          <div class="device-bar"><i></i><i></i><i></i></div>
-          <div class="screen dashboard-screen">
-            <span class="screen-kicker">MODOCLICK.CL</span>
-            <h3>Experiencias <em>digitales</em> que generan resultados.</h3>
-            <p>Diseño estratégico, desarrollo premium y crecimiento medible.</p>
-            <div class="screen-button">Explorar proyectos →</div>
-            <div class="mini-panels"><span></span><span></span><span></span></div>
+      <div class="hero-visual reveal delay-1" aria-label="Panel visual de resultados de Modo Click">
+        <div class="visual-shell tilt-card">
+          <div class="visual-topbar">
+            <div class="window-dots"><i></i><i></i><i></i></div>
+            <span>modoclick / growth-system</span>
+            <span class="live-dot">● live</span>
+          </div>
+
+          <div class="visual-content">
+            <div class="metric-card metric-main">
+              <div class="metric-heading">
+                <span>Crecimiento digital</span>
+                <span class="metric-badge">+38.4%</span>
+              </div>
+              <strong>Tu marca, en movimiento.</strong>
+              <div class="chart" aria-hidden="true">
+                <svg viewBox="0 0 500 170" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="chartFill" x1="0" x2="0" y1="0" y2="1">
+                      <stop offset="0%" stop-color="#ff3d81" stop-opacity=".55" />
+                      <stop offset="100%" stop-color="#ff3d81" stop-opacity="0" />
+                    </linearGradient>
+                  </defs>
+                  <path class="chart-area" d="M0,146 C45,132 70,120 102,130 C145,144 168,82 218,96 C260,108 285,48 330,65 C390,87 409,22 500,18 L500,170 L0,170 Z" />
+                  <path class="chart-line" d="M0,146 C45,132 70,120 102,130 C145,144 168,82 218,96 C260,108 285,48 330,65 C390,87 409,22 500,18" />
+                </svg>
+              </div>
+            </div>
+
+            <div class="visual-bottom">
+              <div class="mini-card">
+                <span>Conversión</span>
+                <strong>4.8x</strong>
+                <small>Retorno potencial</small>
+              </div>
+              <div class="mini-card accent-card">
+                <span>Experiencia</span>
+                <strong>WOW</strong>
+                <small>Diseño memorable</small>
+              </div>
+              <div class="floating-chip chip-one">Branding</div>
+              <div class="floating-chip chip-two">Web + IA</div>
+            </div>
           </div>
         </div>
-        <div class="device phone">
-          <div class="phone-notch"></div>
-          <div class="screen phone-screen">
-            <span>CREAMOS</span><h4>MARCAS QUE CONECTAN</h4><div class="chart-bars"><i></i><i></i><i></i><i></i></div>
-          </div>
-        </div>
-        <div class="device tablet">
-          <div class="screen tablet-screen">
-            <span>DISEÑO · ESTRATEGIA</span><h4>CRECIMIENTO</h4>
-            <div class="planet"></div>
-            <div class="feature-dots"><i></i><i></i><i></i></div>
-          </div>
-        </div>
-        <div class="hero-ring ring-a"></div><div class="hero-ring ring-b"></div>
       </div>
 
-      <div class="client-strip reveal delay-2">
-        <span>Marcas y proyectos desarrollados</span>
-        <div class="logos-text">
-          <b>Clase Business</b><b>Cerrajero Carpintero</b><b>CRACK</b><b>ORSAN</b><b>ZAHARA</b><b>Boutique 79</b>
+      <a class="scroll-indicator" href="#servicios" aria-label="Ir a servicios">
+        <span>Explorar</span><i></i>
+      </a>
+    </section>
+
+    <section class="brand-strip" aria-label="Servicios destacados">
+      <div class="marquee">
+        <div class="marquee-track">
+          <span>ESTRATEGIA</span><i>✦</i><span>BRANDING</span><i>✦</i><span>CONTENIDO</span><i>✦</i><span>DESARROLLO WEB</span><i>✦</i><span>PUBLICIDAD</span><i>✦</i><span>AUTOMATIZACIÓN</span><i>✦</i>
+          <span>ESTRATEGIA</span><i>✦</i><span>BRANDING</span><i>✦</i><span>CONTENIDO</span><i>✦</i><span>DESARROLLO WEB</span><i>✦</i><span>PUBLICIDAD</span><i>✦</i><span>AUTOMATIZACIÓN</span><i>✦</i>
         </div>
       </div>
     </section>
 
-    <section class="services section-shell" id="servicios">
-      <div class="section-grid-bg"></div>
+    <section class="services section-light" id="servicios">
       <div class="section-heading reveal">
-        <div><span class="section-label">Nuestros servicios</span><h2>Soluciones digitales<br>que generan impacto</h2></div>
-        <p>Construimos ecosistemas visuales y digitales conectados con los objetivos reales de cada negocio.</p>
+        <div>
+          <p class="eyebrow dark"><span></span> Todo lo que tu marca necesita</p>
+          <h2>No hacemos piezas sueltas.<br />Creamos un <em>sistema de crecimiento.</em></h2>
+        </div>
+        <p>Conectamos creatividad, tecnología y estrategia para que cada punto de contacto de tu marca trabaje a favor de tus objetivos.</p>
       </div>
+
       <div class="services-grid">
-        <article class="service-card reveal"><div class="service-icon">&lt;/&gt;</div><h3>Desarrollo Web</h3><p>Sitios modernos, rápidos y optimizados para convertir visitantes en clientes.</p><a href="#cotizacion">Conocer servicio →</a></article>
-        <article class="service-card reveal delay-1"><div class="service-icon">✦</div><h3>Diseño Gráfico</h3><p>Identidades visuales que comunican, conectan y posicionan tu marca.</p><a href="#cotizacion">Conocer servicio →</a></article>
-        <article class="service-card reveal delay-2"><div class="service-icon">◢</div><h3>Marketing Digital</h3><p>Estrategias que atraen, convierten y fortalecen la relación con tus clientes.</p><a href="#cotizacion">Conocer servicio →</a></article>
-        <article class="service-card reveal"><div class="service-icon">♥</div><h3>Redes Sociales</h3><p>Contenido estratégico que construye comunidad y aumenta tu presencia.</p><a href="#cotizacion">Conocer servicio →</a></article>
-        <article class="service-card reveal delay-1"><div class="service-icon">↗</div><h3>Publicidad Online</h3><p>Campañas en Google y Meta enfocadas en resultados y oportunidades reales.</p><a href="#cotizacion">Conocer servicio →</a></article>
-        <article class="service-card reveal delay-2"><div class="service-icon">◎</div><h3>Automatización e IA</h3><p>Procesos inteligentes que ahorran tiempo y ayudan a escalar tu negocio.</p><a href="#cotizacion">Conocer servicio →</a></article>
+        <article class="service-card service-featured reveal">
+          <div class="service-number">01</div>
+          <div class="service-icon">✦</div>
+          <h3>Estrategia de marca</h3>
+          <p>Definimos posicionamiento, propuesta de valor, público, personalidad, mensajes y hoja de ruta para crecer con dirección.</p>
+          <ul>
+            <li>Auditoría y diagnóstico</li>
+            <li>Estrategia comercial y digital</li>
+            <li>Plan de comunicación</li>
+          </ul>
+          <a href="#cotizador">Construir mi estrategia <span>↗</span></a>
+        </article>
+
+        <article class="service-card reveal delay-1">
+          <div class="service-number">02</div>
+          <div class="service-icon">◉</div>
+          <h3>Branding e identidad</h3>
+          <p>Diseñamos marcas sólidas, reconocibles y listas para destacar en cualquier plataforma.</p>
+          <ul><li>Logo e identidad visual</li><li>Manual de marca</li><li>Aplicaciones y piezas</li></ul>
+          <a href="#cotizador">Crear una marca potente <span>↗</span></a>
+        </article>
+
+        <article class="service-card reveal delay-2">
+          <div class="service-number">03</div>
+          <div class="service-icon">⌁</div>
+          <h3>Contenido y redes</h3>
+          <p>Convertimos la atención en interés con contenido estratégico, visual y preparado para vender.</p>
+          <ul><li>Dirección creativa</li><li>Reels, carruseles y campañas</li><li>Gestión de contenido</li></ul>
+          <a href="#cotizador">Potenciar mis redes <span>↗</span></a>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-number">04</div>
+          <div class="service-icon">&lt;/&gt;</div>
+          <h3>Desarrollo web</h3>
+          <p>Sitios rápidos, responsivos, visualmente impactantes y diseñados para convertir visitas en oportunidades.</p>
+          <ul><li>Landing pages y sitios corporativos</li><li>E-commerce y reservas</li><li>SEO técnico y analítica</li></ul>
+          <a href="#cotizador">Crear mi nueva web <span>↗</span></a>
+        </article>
+
+        <article class="service-card reveal delay-1">
+          <div class="service-number">05</div>
+          <div class="service-icon">↗</div>
+          <h3>Publicidad digital</h3>
+          <p>Campañas enfocadas en alcance, prospectos y ventas, con seguimiento de cada decisión.</p>
+          <ul><li>Meta Ads y Google Ads</li><li>Embudo y remarketing</li><li>Optimización de campañas</li></ul>
+          <a href="#cotizador">Aumentar mis resultados <span>↗</span></a>
+        </article>
+
+        <article class="service-card service-dark reveal delay-2">
+          <div class="service-number">06</div>
+          <div class="service-icon">∞</div>
+          <h3>IA y automatización</h3>
+          <p>Integramos tecnología para captar, responder, vender y medir con menos trabajo manual.</p>
+          <ul><li>WhatsApp y CRM</li><li>Flujos automáticos</li><li>Asistentes y paneles IA</li></ul>
+          <a href="#cotizador">Automatizar mi negocio <span>↗</span></a>
+        </article>
       </div>
     </section>
 
-    <section class="process section-shell" id="proceso">
-      <div class="process-aurora"></div>
-      <div class="section-heading reveal"><div><span class="section-label">Nuestro proceso</span><h2>Así convertimos una idea<br>en una experiencia digital</h2></div></div>
-      <div class="timeline">
-        <article class="step reveal"><div class="step-icon">01</div><h3>Descubrimiento</h3><p>Entendemos tu negocio, objetivos y audiencia.</p></article>
-        <article class="step reveal delay-1"><div class="step-icon">02</div><h3>Investigación</h3><p>Analizamos mercado, competencia y oportunidades.</p></article>
-        <article class="step reveal delay-2"><div class="step-icon">03</div><h3>Diseño</h3><p>Creamos una dirección visual atractiva y funcional.</p></article>
-        <article class="step reveal"><div class="step-icon">04</div><h3>Desarrollo</h3><p>Construimos una solución rápida, adaptable y segura.</p></article>
-        <article class="step reveal delay-1"><div class="step-icon">05</div><h3>Lanzamiento</h3><p>Publicamos, medimos y verificamos cada detalle.</p></article>
-        <article class="step reveal delay-2"><div class="step-icon">06</div><h3>Optimización</h3><p>Mejoramos continuamente para generar resultados.</p></article>
-      </div>
-    </section>
-
-    <section class="projects section-shell" id="proyectos">
-      <div class="project-glow"></div>
+    <section class="showcase section-color" id="proyectos">
       <div class="section-heading reveal">
-        <div><span class="section-label">Proyectos destacados</span><h2>No solo diseñamos.<br>Transformamos negocios.</h2></div>
-        <p>Cada proyecto combina estrategia, identidad, experiencia de usuario y tecnología.</p>
+        <div>
+          <p class="eyebrow"><span></span> Potencia visual + intención comercial</p>
+          <h2>Diseño que se ve bien.<br /><em>Y trabaja mejor.</em></h2>
+        </div>
+        <p>Cada proyecto está pensado para comunicar valor en segundos, diferenciar la marca y facilitar la decisión de compra.</p>
       </div>
-      <div class="projects-grid">
-        <article class="project project-large reveal">
-          <div class="project-browser cb-project">
-            <div class="browser-top"><i></i><i></i><i></i></div>
-            <div class="project-ui"><span>CLASE BUSINESS</span><h3>Estilo, confianza y presencia.</h3><button>Reservar ahora</button></div>
+
+      <div class="project-stage reveal">
+        <div class="project-tabs" role="tablist" aria-label="Tipos de proyectos">
+          <button class="project-tab active" data-project="web" role="tab">Experiencia web</button>
+          <button class="project-tab" data-project="brand" role="tab">Identidad visual</button>
+          <button class="project-tab" data-project="campaign" role="tab">Campañas</button>
+        </div>
+
+        <div class="project-preview project-web active" data-project-panel="web">
+          <div class="mock-browser">
+            <div class="browser-bar"><span></span><span></span><span></span><small>www.tumarca.cl</small></div>
+            <div class="browser-body">
+              <div class="browser-copy">
+                <small>EXPERIENCIA PREMIUM</small>
+                <h3>Una web que presenta, convence y convierte.</h3>
+                <p>Diseño responsive, navegación intuitiva y llamados a la acción pensados para vender.</p>
+                <button>Comenzar ahora ↗</button>
+              </div>
+              <div class="browser-art"><div class="art-sphere"></div><div class="art-card"></div></div>
+            </div>
           </div>
-          <div class="project-meta"><div><h3>Clase Business</h3><p>Sitio web · Marketing · Estrategia</p></div><span>01</span></div>
+          <div class="project-caption"><span>01</span><div><strong>Web de alto impacto</strong><p>Estrategia, UX/UI, desarrollo, animaciones y conversión.</p></div></div>
+        </div>
+
+        <div class="project-preview project-brand" data-project-panel="brand">
+          <div class="brand-board">
+            <div class="brand-logo-demo">NØVA<span>↗</span></div>
+            <div class="brand-palette"><i></i><i></i><i></i><i></i></div>
+            <div class="brand-words"><span>MODERNA</span><span>PRECISA</span><span>MEMORABLE</span></div>
+          </div>
+          <div class="project-caption"><span>02</span><div><strong>Identidad con carácter</strong><p>Un lenguaje visual coherente que eleva la percepción.</p></div></div>
+        </div>
+
+        <div class="project-preview project-campaign" data-project-panel="campaign">
+          <div class="campaign-board">
+            <div class="campaign-phone"><div class="phone-post"><small>CAMPAÑA</small><strong>ACTIVA<br />TU MARCA.</strong><span>DESLIZA ↗</span></div></div>
+            <div class="campaign-stats"><div><span>Alcance</span><strong>428K</strong></div><div><span>Interacción</span><strong>+64%</strong></div><div><span>Leads</span><strong>3.7X</strong></div></div>
+          </div>
+          <div class="project-caption"><span>03</span><div><strong>Campañas con intención</strong><p>Concepto, contenido, anuncios y seguimiento de resultados.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="process section-dark" id="metodo">
+      <div class="process-intro reveal">
+        <p class="eyebrow"><span></span> Método Modo Click</p>
+        <h2>Menos improvisación.<br /><span class="gradient-text">Más dirección.</span></h2>
+        <p>Un proceso claro para pasar de una idea a una presencia digital fuerte, coherente y preparada para crecer.</p>
+        <div class="process-counter"><strong id="processCurrent">01</strong><span>/ 04</span></div>
+      </div>
+
+      <div class="process-list">
+        <article class="process-step active reveal" data-step="01">
+          <div class="step-head"><span>01</span><h3>Descubrimos</h3><i>↗</i></div>
+          <div class="step-body"><p>Entendemos tu negocio, tus clientes, tu competencia y la oportunidad real de crecimiento.</p></div>
         </article>
-        <article class="project reveal delay-1">
-          <div class="project-phone cc-project"><div class="phone-notch"></div><span>CERRAJERO<br>CARPINTERO</span><h3>Soluciones rápidas y seguras.</h3><button>Solicitar servicio</button></div>
-          <div class="project-meta"><div><h3>Cerrajero Carpintero</h3><p>Branding · Web · SEO</p></div><span>02</span></div>
+        <article class="process-step reveal" data-step="02">
+          <div class="step-head"><span>02</span><h3>Definimos</h3><i>↗</i></div>
+          <div class="step-body"><p>Ordenamos prioridades, mensajes, oferta, canales y objetivos medibles.</p></div>
         </article>
-        <article class="project reveal delay-2">
-          <div class="project-tablet crack-project"><span>CRACK</span><h3>Limpieza profunda que cuida lo que más quieres.</h3><div class="bubbles"></div><button>Conocer productos</button></div>
-          <div class="project-meta"><div><h3>Crack Detergentes</h3><p>Marca · E-commerce · Campaña</p></div><span>03</span></div>
+        <article class="process-step reveal" data-step="03">
+          <div class="step-head"><span>03</span><h3>Creamos</h3><i>↗</i></div>
+          <div class="step-body"><p>Diseñamos y desarrollamos cada pieza como parte de una misma experiencia de marca.</p></div>
+        </article>
+        <article class="process-step reveal" data-step="04">
+          <div class="step-head"><span>04</span><h3>Activamos</h3><i>↗</i></div>
+          <div class="step-body"><p>Lanzamos, medimos, optimizamos y convertimos el aprendizaje en nuevas oportunidades.</p></div>
         </article>
       </div>
     </section>
 
-    <section class="agency section-shell" id="agencia">
-      <div class="agency-bg"></div>
-      <div class="agency-copy reveal">
-        <span class="section-label">Modo Click</span>
-        <h2>Una agencia que entiende<br>el negocio completo.</h2>
-        <p>No diseñamos por diseñar. Analizamos cómo se presenta tu marca, cómo comunica, cómo vende y cómo puede aprovechar mejor sus canales digitales.</p>
-        <div class="stats"><div><strong data-count="50">0</strong><span>Proyectos</span></div><div><strong data-count="6">0</strong><span>Áreas integradas</span></div><div><strong data-count="100">0</strong><span>% personalizado</span></div></div>
+    <section class="results section-light">
+      <div class="results-copy reveal">
+        <p class="eyebrow dark"><span></span> Crecimiento conectado</p>
+        <h2>Tu marca no necesita “más publicaciones”. Necesita un <em>sistema.</em></h2>
+        <p>Cuando estrategia, diseño, contenido, tecnología y pauta trabajan juntos, la marca deja de depender de acciones aisladas y empieza a construir valor.</p>
+        <a class="button button-dark" href="#cotizador">Construyamos el sistema <span>↗</span></a>
       </div>
-      <div class="agency-visual reveal delay-1">
-        <div class="floating-card fc-1"><span>ESTRATEGIA</span><b>Objetivos claros</b></div>
-        <div class="floating-card fc-2"><span>DISEÑO</span><b>Identidad memorable</b></div>
-        <div class="floating-card fc-3"><span>TECNOLOGÍA</span><b>Experiencia superior</b></div>
-        <div class="core-sphere"><i></i><b>MODO<br>CLICK</b></div>
+      <div class="results-grid reveal delay-1">
+        <div><strong data-count="360">0</strong><span>°</span><p>Visión integral de marca</p></div>
+        <div><strong data-count="6">0</strong><span>+</span><p>Áreas conectadas</p></div>
+        <div><strong data-count="1">0</strong><span></span><p>Equipo, una sola dirección</p></div>
+        <div class="result-accent"><strong>WOW</strong><p>Percepción que diferencia</p></div>
       </div>
     </section>
 
-    <section class="quote section-shell" id="cotizacion">
-      <div class="quote-shape"></div>
-      <div class="quote-intro reveal">
-        <span class="section-label">Comencemos</span>
-        <h2>Cuéntanos qué quieres construir.</h2>
-        <p>Completa los datos y generaremos un mensaje listo para enviarlo por WhatsApp o correo corporativo.</p>
-        <ul><li>Respuesta personalizada</li><li>Orientación inicial sin costo</li><li>Propuesta adaptada a tu negocio</li></ul>
+    <section class="plans section-soft" id="planes">
+      <div class="section-heading centered reveal">
+        <p class="eyebrow dark"><span></span> Formas de trabajar juntos</p>
+        <h2>Elige el impulso que<br /><em>tu marca necesita.</em></h2>
+        <p>Podemos desarrollar un proyecto puntual o convertirnos en tu equipo creativo y digital.</p>
       </div>
+
+      <div class="plans-grid">
+        <article class="plan-card reveal">
+          <span class="plan-label">PROYECTO</span>
+          <h3>Launch</h3>
+          <p>Para marcas que necesitan crear o renovar una pieza estratégica.</p>
+          <ul><li>Objetivo y alcance definido</li><li>Dirección creativa</li><li>Diseño y desarrollo</li><li>Entrega lista para activar</li></ul>
+          <button class="plan-select" data-plan="Launch">Cotizar proyecto <span>↗</span></button>
+        </article>
+
+        <article class="plan-card plan-featured reveal delay-1">
+          <span class="recommended">MÁS COMPLETO</span>
+          <span class="plan-label">CRECIMIENTO</span>
+          <h3>Scale</h3>
+          <p>Para empresas que quieren ordenar, potenciar y escalar su ecosistema digital.</p>
+          <ul><li>Estrategia integral</li><li>Branding y contenido</li><li>Web o landing de conversión</li><li>Campañas y automatización</li><li>Analítica y optimización</li></ul>
+          <button class="plan-select" data-plan="Scale">Impulsar mi marca <span>↗</span></button>
+        </article>
+
+        <article class="plan-card reveal delay-2">
+          <span class="plan-label">EQUIPO EXTERNO</span>
+          <h3>Partner</h3>
+          <p>Para marcas que necesitan acompañamiento creativo y digital permanente.</p>
+          <ul><li>Plan mensual</li><li>Prioridad de producción</li><li>Contenido y campañas</li><li>Soporte estratégico</li><li>Reporte de avances</li></ul>
+          <button class="plan-select" data-plan="Partner">Hablar con la agencia <span>↗</span></button>
+        </article>
+      </div>
+    </section>
+
+    <section class="quote-section section-dark" id="cotizador">
+      <div class="quote-copy reveal">
+        <p class="eyebrow"><span></span> Cotización inteligente</p>
+        <h2>Cuéntanos qué quieres lograr.</h2>
+        <p>Selecciona los servicios que necesitas. Prepararemos el resumen para iniciar la conversación por WhatsApp o correo.</p>
+        <div class="contact-points">
+          <a href="mailto:contacto@modoclick.cl"><span>✉</span><div><small>Correo</small><strong>contacto@modoclick.cl</strong></div></a>
+          <a href="https://wa.me/56974230898" target="_blank" rel="noopener"><span>↗</span><div><small>WhatsApp</small><strong>Conversemos ahora</strong></div></a>
+        </div>
+      </div>
+
       <form class="quote-form reveal delay-1" id="quoteForm">
-        <div class="field full"><label>¿Qué servicio necesitas?</label><div class="chip-group"><label><input type="checkbox" name="service" value="Desarrollo web"><span>Desarrollo web</span></label><label><input type="checkbox" name="service" value="Branding y diseño"><span>Branding y diseño</span></label><label><input type="checkbox" name="service" value="Marketing digital"><span>Marketing digital</span></label><label><input type="checkbox" name="service" value="Automatización e IA"><span>Automatización e IA</span></label></div></div>
-        <div class="field"><label for="name">Nombre</label><input id="name" name="name" required placeholder="Tu nombre"></div>
-        <div class="field"><label for="company">Empresa</label><input id="company" name="company" placeholder="Nombre de la empresa"></div>
-        <div class="field"><label for="email">Correo</label><input id="email" name="email" type="email" required placeholder="nombre@empresa.cl"></div>
-        <div class="field"><label for="phone">WhatsApp</label><input id="phone" name="phone" required placeholder="+56 9 ..."></div>
-        <div class="field"><label for="budget">Presupuesto estimado</label><select id="budget" name="budget"><option>Por definir</option><option>Hasta $500.000</option><option>$500.000 a $1.000.000</option><option>$1.000.000 a $2.500.000</option><option>Más de $2.500.000</option></select></div>
-        <div class="field"><label for="timeline">¿Cuándo deseas comenzar?</label><select id="timeline" name="timeline"><option>Lo antes posible</option><option>En 1 mes</option><option>En 2 a 3 meses</option><option>Solo estoy cotizando</option></select></div>
-        <div class="field full"><label for="message">Cuéntanos sobre el proyecto</label><textarea id="message" name="message" rows="5" placeholder="Objetivo, necesidades y cualquier información importante..."></textarea></div>
-        <div class="form-actions full"><button class="btn btn-whatsapp" type="button" id="sendWhatsApp">Enviar por WhatsApp</button><button class="btn btn-secondary" type="button" id="sendEmail">Enviar por correo</button></div>
-        <p class="form-note full">Configura el número de WhatsApp en <code>script.js</code>. El correo está definido como contacto@modoclick.cl.</p>
+        <div class="form-progress"><span id="formProgress"></span></div>
+
+        <div class="form-step active" data-form-step="1">
+          <div class="form-step-label">PASO 1 DE 3</div>
+          <h3>¿Qué necesita tu marca?</h3>
+          <div class="service-options">
+            <label><input type="checkbox" name="services" value="Estrategia de marca" /><span>Estrategia</span><i>+</i></label>
+            <label><input type="checkbox" name="services" value="Branding e identidad" /><span>Branding</span><i>+</i></label>
+            <label><input type="checkbox" name="services" value="Contenido y redes" /><span>Contenido</span><i>+</i></label>
+            <label><input type="checkbox" name="services" value="Desarrollo web" /><span>Desarrollo web</span><i>+</i></label>
+            <label><input type="checkbox" name="services" value="Publicidad digital" /><span>Publicidad</span><i>+</i></label>
+            <label><input type="checkbox" name="services" value="IA y automatización" /><span>IA y automatización</span><i>+</i></label>
+          </div>
+          <button class="button button-primary form-next" type="button">Continuar <span>→</span></button>
+        </div>
+
+        <div class="form-step" data-form-step="2">
+          <div class="form-step-label">PASO 2 DE 3</div>
+          <h3>¿Cuál es tu principal objetivo?</h3>
+          <div class="objective-options">
+            <label><input type="radio" name="objective" value="Lanzar una marca o proyecto" /><span>Lanzar una marca o proyecto</span></label>
+            <label><input type="radio" name="objective" value="Mejorar mi imagen y posicionamiento" /><span>Mejorar imagen y posicionamiento</span></label>
+            <label><input type="radio" name="objective" value="Generar más ventas o clientes" /><span>Generar más ventas o clientes</span></label>
+            <label><input type="radio" name="objective" value="Automatizar procesos" /><span>Automatizar procesos</span></label>
+          </div>
+          <div class="form-buttons"><button class="form-back" type="button">← Volver</button><button class="button button-primary form-next" type="button">Continuar <span>→</span></button></div>
+        </div>
+
+        <div class="form-step" data-form-step="3">
+          <div class="form-step-label">PASO 3 DE 3</div>
+          <h3>Datos para contactarte</h3>
+          <div class="input-grid">
+            <label><span>Nombre</span><input type="text" name="name" placeholder="Tu nombre" required /></label>
+            <label><span>Empresa</span><input type="text" name="company" placeholder="Nombre de la marca" /></label>
+            <label><span>Correo</span><input type="email" name="email" placeholder="nombre@empresa.cl" required /></label>
+            <label><span>WhatsApp</span><input type="tel" name="phone" placeholder="+56 9..." required /></label>
+            <label class="full"><span>Cuéntanos brevemente</span><textarea name="details" rows="4" placeholder="¿Qué tienes en mente?"></textarea></label>
+          </div>
+          <div class="form-buttons"><button class="form-back" type="button">← Volver</button><button class="button button-primary" type="submit">Enviar por WhatsApp <span>↗</span></button></div>
+          <p class="form-note">Al enviar, se abrirá WhatsApp con el resumen listo.</p>
+        </div>
       </form>
     </section>
 
-    <section class="final-cta section-shell" id="contacto">
-      <div class="cta-wave"></div>
-      <div class="reveal"><span>¿Listo para iniciar?</span><h2>Hagamos crecer <em>tu negocio</em> juntos.</h2><p>Estrategia, creatividad y tecnología para llevar tu marca al siguiente nivel.</p></div>
-      <div class="cta-buttons reveal delay-1"><a class="btn btn-primary" href="#cotizacion">Solicitar propuesta</a><a class="btn btn-secondary" href="mailto:contacto@modoclick.cl">contacto@modoclick.cl</a></div>
+    <section class="final-cta">
+      <div class="cta-orb"></div>
+      <p class="reveal">TU PRÓXIMO NIVEL EMPIEZA CON UN CLICK.</p>
+      <h2 class="reveal delay-1">Hagamos que tu marca<br /><span>sea imposible de ignorar.</span></h2>
+      <a class="button button-white magnetic reveal delay-2" href="#cotizador">Empezar proyecto <span>↗</span></a>
     </section>
   </main>
 
   <footer>
-    <div class="footer-brand"><img src="assets/logo-modoclick.jpeg" alt="Modo Click"><p>Herramientas digitales para hacer crecer tu negocio.</p></div>
-    <div><h4>Enlaces</h4><a href="#inicio">Inicio</a><a href="#servicios">Servicios</a><a href="#proyectos">Proyectos</a><a href="#cotizacion">Cotización</a></div>
-    <div><h4>Servicios</h4><span>Desarrollo web</span><span>Diseño gráfico</span><span>Marketing digital</span><span>Automatización e IA</span></div>
-    <div><h4>Contacto</h4><a href="mailto:contacto@modoclick.cl">contacto@modoclick.cl</a><span>Santiago, Chile</span></div>
-    <div class="footer-bottom">© 2026 Modo Click. Todos los derechos reservados.</div>
+    <div class="footer-main">
+      <a class="brand footer-brand" href="#inicio"><span class="brand-mark"><span class="brand-arrow">↗</span></span><span class="brand-name">MODO<span>CLICK</span></span></a>
+      <p>Ideas que llaman la atención.<br />Estrategias que generan acción.</p>
+      <div class="footer-links"><a href="#servicios">Servicios</a><a href="#proyectos">Proyectos</a><a href="#metodo">Método</a><a href="#cotizador">Contacto</a></div>
+      <div class="footer-social"><a href="#" aria-label="Instagram">IG</a><a href="#" aria-label="LinkedIn">IN</a><a href="#" aria-label="Behance">BE</a></div>
+    </div>
+    <div class="footer-bottom"><span>© <span id="year"></span> Modo Click. Todos los derechos reservados.</span><span>Santiago, Chile · Trabajamos con marcas sin fronteras.</span></div>
   </footer>
 
-  <a class="floating-whatsapp" id="floatingWhatsApp" href="#cotizacion" aria-label="Cotizar por WhatsApp"><span>◉</span><div><b>¿Hablamos?</b><small>Cotiza tu proyecto</small></div></a>
+  <a class="whatsapp-float" href="https://wa.me/56974230898?text=Hola%20Modo%20Click,%20quiero%20cotizar%20un%20proyecto." target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    <span>WA</span><small>Hablemos</small>
+  </a>
+
   <script src="script.js"></script>
 </body>
 </html>
